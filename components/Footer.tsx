@@ -53,7 +53,7 @@ const Footer = () => {
             <FaDiscord className="h-5 w-5" />
           </a>
           <a
-            href="https://github.com/mattuser12"
+            href="https://github.com/mattuser12/mjc-website"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-red-500 transition-colors"
