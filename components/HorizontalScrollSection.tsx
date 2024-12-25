@@ -51,7 +51,7 @@ const HorizontalScrollSection = () => {
       duration: 1,
     });
 
-    // Create a ScrollTrigger instance and store it in a variable
+    // Create a ScrollTrigger instance
     const trigger = ScrollTrigger.create({
       trigger: racesWrapper,
       start: "top top",
@@ -63,7 +63,7 @@ const HorizontalScrollSection = () => {
       invalidateOnRefresh: true,
     });
 
-    // Ensure all images are loaded before calculating measurements.
+    // Ensure all images are loaded before calculating measurements
     const images = races.querySelectorAll("img");
     let loadedCount = 0;
     const totalImages = images.length;
@@ -95,7 +95,7 @@ const HorizontalScrollSection = () => {
       ScrollTrigger.refresh();
     }
 
-    // Cleanup: kill only this tween and this trigger
+    // Cleanup
     return () => {
       tween.kill();
       trigger.kill();
