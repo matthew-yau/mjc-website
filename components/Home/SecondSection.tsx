@@ -3,7 +3,6 @@
 import React, { useRef } from "react";
 import useIsVisible from "@/hooks/useIsVisible";
 import OverlappingCircles from "./OverlappingCircles";
-import GridOfDots from "./GridOfDots";
 
 interface ActivityBoxProps {
   icon: string;
