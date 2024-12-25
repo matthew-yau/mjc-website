@@ -1,17 +1,26 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
 import Timeline from "../../../components/About/Timeline";
 import FAQ from "../../../components/About/FAQ";
-import VerticalTimelineComponent from "../../../components/About/VerticalTimelineComponent";
 
 const AboutPage: React.FC = () => {
   const [language, setLanguage] = useState<"en" | "jp">("en");
 
+  // Synchronize language with local storage
+  useEffect(() => {
+    const storedLanguage = localStorage.getItem("language") as "en" | "jp";
+    if (storedLanguage) {
+      setLanguage(storedLanguage);
+    }
+  }, []);
+
   const toggleLanguage = () => {
-    setLanguage((prev) => (prev === "en" ? "jp" : "en"));
+    const newLanguage = language === "en" ? "jp" : "en";
+    setLanguage(newLanguage);
+    localStorage.setItem("language", newLanguage); // Store the selected language in localStorage
   };
 
   return (

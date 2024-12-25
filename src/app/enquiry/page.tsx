@@ -1,41 +1,31 @@
-// Import necessary dependencies
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
 import EnquiryForm from "../../../components/Enquiry/EnquiryForm";
 
-const PlaceholderPage: React.FC = () => {
-  // Manage language state
+const Enquiry: React.FC = () => {
   const [language, setLanguage] = useState<"en" | "jp">("en");
 
-  // Toggle language function
-  const toggleLanguage = () => {
-    setLanguage((prev) => (prev === "en" ? "jp" : "en"));
-  };
+  // Synchronize language with local storage
+  useEffect(() => {
+    const storedLanguage = localStorage.getItem("language") as "en" | "jp";
+    if (storedLanguage) {
+      setLanguage(storedLanguage);
+    }
+  }, []);
 
-  const handleFormSubmit = (formData: {
-    name: string;
-    email: string;
-    message: string;
-  }) => {
-    console.log("Form submitted:", formData);
-    alert(
-      language === "en"
-        ? "Thank you for your enquiry!"
-        : "お問い合わせありがとうございます！"
-    );
+  const toggleLanguage = () => {
+    const newLanguage = language === "en" ? "jp" : "en";
+    setLanguage(newLanguage);
+    localStorage.setItem("language", newLanguage); // Store the selected language in localStorage
   };
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Header Component */}
       <Header language={language} onToggleLanguage={toggleLanguage} />
-
-      {/* Main Content */}
       <main className="flex-grow flex flex-col bg-[#f8fafc] items-center justify-center p-4">
         <div className="text-center mb-12">
-          {/* Title */}
           <h1 className="text-3xl font-bold mt-12 text-left">
             {language === "en" ? "Contact Us" : "お問い合わせ"}
           </h1>
@@ -75,11 +65,9 @@ const PlaceholderPage: React.FC = () => {
           <EnquiryForm language={language} />
         </div>
       </main>
-
-      {/* Footer Component */}
       <Footer />
     </div>
   );
 };
 
-export default PlaceholderPage;
+export default Enquiry;

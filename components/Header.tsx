@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link"; // Import Link component
 import { RxHamburgerMenu } from "react-icons/rx";
 
 export default function Header({
@@ -59,7 +60,7 @@ export default function Header({
       <div className="container mx-auto flex justify-between items-center px-4 py-4 md:px-8">
         {/* Logo Section */}
         <div className="flex items-center">
-          <a
+          <Link
             href="/"
             className="block transform transition-transform duration-300 hover:scale-110 hover:opacity-80"
           >
@@ -72,7 +73,7 @@ export default function Header({
               }
               className="h-10 w-10 md:h-14 md:w-14"
             />
-          </a>
+          </Link>
         </div>
 
         {/* Navigation for Desktop */}
@@ -80,12 +81,12 @@ export default function Header({
           <ul className="flex space-x-9 text-[#2b2c2e] font-lato font-medium text-sm md:text-base">
             {translations.navigation[language].map((item) => (
               <li key={item.name} className="relative group">
-                <a
+                <Link
                   href={item.link}
                   className="block pb-1 text-inherit group-hover:text-red-500 transition duration-200"
                 >
                   {item.name}
-                </a>
+                </Link>
                 <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-red-500 group-hover:w-full transition-all duration-300 ease-out"></span>
               </li>
             ))}
@@ -129,13 +130,13 @@ export default function Header({
           <ul className="flex flex-col space-y-4 px-4 py-4 text-[#2b2c2e] font-lato font-medium text-sm">
             {translations.navigation[language].map((item) => (
               <li key={item.name}>
-                <a
+                <Link
                   href={item.link}
                   className="block py-2 text-inherit hover:text-red-500 transition duration-200"
                   onClick={() => setIsMobileMenuOpen(false)} // Close the menu on link click
                 >
                   {item.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

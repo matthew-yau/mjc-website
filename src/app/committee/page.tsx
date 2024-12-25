@@ -1,7 +1,7 @@
 // Import necessary dependencies
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
 import ClubRoleDisplay from "../../../components/Team/ClubRoleDisplay";
@@ -9,8 +9,18 @@ import ClubRoleDisplay from "../../../components/Team/ClubRoleDisplay";
 const TeamPage: React.FC = () => {
   const [language, setLanguage] = useState<"en" | "jp">("en");
 
+  // Synchronize language with local storage
+  useEffect(() => {
+    const storedLanguage = localStorage.getItem("language") as "en" | "jp";
+    if (storedLanguage) {
+      setLanguage(storedLanguage);
+    }
+  }, []);
+
   const toggleLanguage = () => {
-    setLanguage((prev) => (prev === "en" ? "jp" : "en"));
+    const newLanguage = language === "en" ? "jp" : "en";
+    setLanguage(newLanguage);
+    localStorage.setItem("language", newLanguage); // Store the selected language in local storage
   };
 
   return (
