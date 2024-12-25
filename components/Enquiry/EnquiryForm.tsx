@@ -84,8 +84,13 @@ const EnquiryForm: React.FC<{ language: "en" | "jp" }> = ({ language }) => {
 
       // Clear the form
       setFormState({ name: "", email: "", message: "" });
-    } catch (error: any) {
-      setError(error.message || translations.error.generic[language]);
+    } catch (error: unknown) {
+      // Handle error safely
+      if (error instanceof Error) {
+        setError(error.message || translations.error.generic[language]);
+      } else {
+        setError(translations.error.generic[language]);
+      }
     }
   };
 
