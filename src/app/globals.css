@@ -2,108 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-body,
-html {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-}
-.embedsocial-wrapper {
-  width: 80%; /* Adjust width to make it smaller */
-  max-width: 1000px; /* Set a maximum width */
-  margin: 0 auto; /* Center the widget horizontally */
-  overflow: hidden; /* Prevent overflow */
-  transform: scale(0.9); /* Scale down the widget */
-  transform-origin: top center; /* Ensure scaling is centered */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
 }
 
-.embedsocial-hashtag {
-  width: 100%; /* Ensure the widget scales proportionally */
-}
-
-@keyframes cassetteScroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
   }
 }
 
-.cassette-scroll {
-  animation: cassetteScroll 15s linear infinite; /* Adjust the speed with 15s */
-  width: max-content; /* Prevent wrapping of content */
-}
-
-/* Custom Button Styles */
-.btn {
+body {
+  color: var(--foreground);
+  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-  text-transform: none; /* Use natural case */
-}
-
-.btn-layered-3d {
-  width: 140px; /* Keep button width */
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  outline: none;
-  border: 0;
-  vertical-align: middle;
-  text-decoration: none;
-  font-size: 1rem; /* Make text slightly smaller */
-  font-family: inherit;
-  font-weight: 600;
-  text-transform: none; /* Ensure natural casing */
-  padding: 0.7em 1.5em; /* Adjust vertical padding to make button thinner */
-  line-height: 1.2; /* Ensure text is vertically centered */
-  border-radius: 0.5em; /* Slightly reduce rounded corners */
-  transform-style: preserve-3d;
-  transition: transform 0.15s ease-out, background 0.15s ease-out;
-}
-
-.btn-layered-3d::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  inset: 0;
-  border-radius: inherit;
-  transform: translate3d(
-    0,
-    0.5em,
-    -1em
-  ); /* Adjust height for the shadow effect */
-  transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
-}
-
-.btn-layered-3d:hover {
-  transform: translateY(0.25em);
-}
-
-.btn-layered-3d:hover::before {
-  transform: translate3d(0, 0.25em, -1em); /* Reduce hover shadow offset */
-}
-
-.btn-layered-3d--red {
-  color: rgb(239, 37, 60);
-  background: rgb(253, 227, 230);
-  border: 2px solid rgb(239, 37, 60);
-}
-
-.btn-layered-3d--red::before {
-  background: rgb(246, 132, 145);
-  box-shadow: rgb(239, 37, 60) 0px 0px 0px 2px;
-}
-
-.polaroid {
-  @apply relative bg-white shadow-lg;
-  border: 8px solid white; /* Adds a white border */
-  border-bottom-width: 16px; /* Thicker bottom border */
-  overflow: visible; /* Ensure child elements can extend beyond boundaries */
-}
-
-.photo {
-  @apply rounded-md object-cover;
-  max-width: 80%; /* Make the images slightly smaller */
-  height: auto; /* Maintain aspect ratio */
 }
