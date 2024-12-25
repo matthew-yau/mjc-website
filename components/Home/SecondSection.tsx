@@ -5,6 +5,12 @@ import useIsVisible from "@/hooks/useIsVisible";
 import OverlappingCircles from "./OverlappingCircles";
 import GridOfDots from "./GridOfDots";
 
+interface ActivityBoxProps {
+  icon: string;
+  title: string;
+  description: string;
+}
+
 const ActivityBox = ({ icon, title, description }: ActivityBoxProps) => (
   <div
     className="flex flex-col items-center p-8 bg-[#f8fafc] rounded-lg transition-transform transform hover:scale-110 hover:shadow-[0_0_20px_rgb(239,37,60)]"
@@ -51,13 +57,6 @@ export default function SecondSection() {
             Make new friendships and immerse yourself in Japanese language and
             culture at our weekly, fortnightly, and annual events!
           </p>
-          <GridOfDots
-            rows={6}
-            cols={8}
-            dotSize="30px"
-            gap="20px"
-            color="#75C9FE"
-          />
           {/* Overlapping Circles */}
           <OverlappingCircles />
 
