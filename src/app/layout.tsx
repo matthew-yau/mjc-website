@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Monash Japanese Club",
+  title: "MJC",
   description: "Welcome to the Monash Japanese Club website.",
 };
 
