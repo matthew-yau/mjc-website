@@ -42,8 +42,8 @@ const AboutPage: React.FC = () => {
               <>
                 <p>
                   The Monash Japanese Club (MJC) aims to foster cultural
-                  exchange and enrich our members' understanding of Japanese
-                  traditions, language, and lifestyle.
+                  exchange and enrich our members&apos; understanding of
+                  Japanese traditions, language, and lifestyle.
                 </p>
                 <p className="mt-4">
                   Since our establishment, we have been a vibrant hub for those

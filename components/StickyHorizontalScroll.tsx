@@ -4,7 +4,7 @@ import React, { useRef, useEffect, useState } from "react";
 export default function StickyHorizontalScroll() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const horizontalRef = useRef<HTMLDivElement>(null);
-  const [scrollProgress, setScrollProgress] = useState(0);
+  const [, setScrollProgress] = useState<number>(0);
 
   useEffect(() => {
     const handleScroll = () => {

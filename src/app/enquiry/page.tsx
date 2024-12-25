@@ -32,8 +32,8 @@ const Enquiry: React.FC = () => {
           <p className="text-lg text-gray-600 text-left mt-4">
             {language === "en" ? (
               <>
-                Got a question? Fill out the enquiry form below and we'll get
-                back to you as soon as possible.
+                Got a question? Fill out the enquiry form below and we&apos;ll
+                get back to you as soon as possible.
                 <br />
                 Optionally, send us an email at{" "}
               </>

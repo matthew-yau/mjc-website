@@ -1,4 +1,5 @@
 import nodemailer from "nodemailer";
+import { NextApiRequest, NextApiResponse } from "next";
 
 export default async function handler(
   req: NextApiRequest,
@@ -30,9 +31,14 @@ export default async function handler(
       });
 
       res.status(200).json({ message: "Enquiry submitted successfully!" });
-    } catch (error: any) {
-      console.error("Error sending email:", error);
-      res.status(500).json({ error: "Failed to send email." });
+    } catch (error) {
+      if (error instanceof Error) {
+        console.error("Error sending email:", error.message);
+        res.status(500).json({ error: "Failed to send email." });
+      } else {
+        console.error("Unexpected error:", error);
+        res.status(500).json({ error: "An unexpected error occurred." });
+      }
     }
   } else {
     res.status(405).json({ error: "Method not allowed" });

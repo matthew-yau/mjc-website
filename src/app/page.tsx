@@ -1,12 +1,11 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import FirstSection from "../../components/Home/FirstSection";
 import SecondSection from "../../components/Home/SecondSection";
 import IGWidget from "../../components/Home/IGWidget";
 import SponsorsSection from "../../components/Home/SponsorsSection";
-import useIsVisible from "@/hooks/useIsVisible";
 import InfiniteScroll from "../../components/InfiniteScroll";
 import BuyMembershipSection from "../../components/Home/BuyMembershipSection";
 
