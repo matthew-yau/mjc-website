@@ -40,12 +40,11 @@ const HorizontalScrollSection = () => {
     if (!races || !racesWrapper) return;
 
     function getScrollAmount() {
-      const racesWidth = races.scrollWidth;
+      const racesWidth = races?.scrollWidth || 0; // Default to 0 if null
       return racesWidth - window.innerWidth; // Positive scroll distance
     }
 
-    // Create the horizontal tween
-    const tween = gsap.to(races, {
+    const tween = gsap.to(races!, {
       x: () => -getScrollAmount(),
       ease: "none",
       duration: 1,
