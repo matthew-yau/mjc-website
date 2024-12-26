@@ -70,7 +70,7 @@ export default function Home() {
       </div>
 
       {/* Embed IG Widget */}
-      <IGWidget dataRef={process.env.NEXT_PUBLIC_IG_WIDGET_REF} />
+      <IGWidget dataRef={process.env.NEXT_PUBLIC_IG_WIDGET_REF!} />
       <Footer />
     </main>
   );
