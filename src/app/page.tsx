@@ -11,10 +11,15 @@ import BuyMembershipSection from "../../components/Home/BuyMembershipSection";
 
 export default function Home() {
   // Manage the language state
-  const [language, setLanguage] = useState<"en" | "jp">(() => {
-    // Initialize language from localStorage or default to "en"
-    return (localStorage.getItem("language") as "en" | "jp") || "en";
-  });
+  const [language, setLanguage] = useState<"en" | "jp">("en");
+
+  // Synchronize language state with localStorage on mount
+  useEffect(() => {
+    const storedLanguage = localStorage.getItem("language") as "en" | "jp";
+    if (storedLanguage) {
+      setLanguage(storedLanguage);
+    }
+  }, []);
 
   // Toggle the language and save to localStorage
   const toggleLanguage = (newLang?: "en" | "jp") => {
@@ -22,26 +27,6 @@ export default function Home() {
     setLanguage(nextLanguage);
     localStorage.setItem("language", nextLanguage);
   };
-
-  // Ensure language is synchronized with localStorage on mount
-  useEffect(() => {
-    const storedLanguage = localStorage.getItem("language") as "en" | "jp";
-    if (storedLanguage && storedLanguage !== language) {
-      setLanguage(storedLanguage);
-    }
-  }, []);
-
-  // const ref1 = useRef<HTMLDivElement>(null);
-  // const isVisible1 = useIsVisible(ref1);
-
-  // const ref2 = useRef<HTMLDivElement>(null);
-  // const isVisible2 = useIsVisible(ref2);
-
-  // const ref3 = useRef<HTMLDivElement>(null);
-  // const isVisible3 = useIsVisible(ref3);
-
-  // const ref4 = useRef<HTMLDivElement>(null);
-  // const isVisible4 = useIsVisible(ref4);
 
   return (
     <main className="relative bg-[#f8fafc]">
@@ -70,7 +55,9 @@ export default function Home() {
       </div>
 
       {/* Embed IG Widget */}
-      <IGWidget dataRef={process.env.NEXT_PUBLIC_IG_WIDGET_REF!} />
+      {process.env.NEXT_PUBLIC_IG_WIDGET_REF && (
+        <IGWidget dataRef={process.env.NEXT_PUBLIC_IG_WIDGET_REF} />
+      )}
       <Footer />
     </main>
   );
