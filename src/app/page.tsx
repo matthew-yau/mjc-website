@@ -45,7 +45,7 @@ export default function Home() {
           <h1 className="text-4xl font-bold text-gray-800 mb-6">
             Our Sponsors
           </h1>
-          <p className="text-lg text-gray-600 mb-12">
+          <p className="text-lg text-gray-600 mb-16">
             We are grateful for the support of our amazing sponsors!
           </p>
 

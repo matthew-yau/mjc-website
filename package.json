@@ -11,6 +11,7 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
+    "@glidejs/glide": "^3.7.1",
     "@mui/icons-material": "^6.3.0",
     "@mui/material": "^6.3.0",
     "autoprefixer": "^10.4.20",
@@ -25,6 +26,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@types/glidejs__glide": "^3.6.5",
     "@types/node": "^20",
     "@types/nodemailer": "^6.4.17",
     "@types/react": "^19",
