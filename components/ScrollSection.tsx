@@ -26,7 +26,7 @@ export default function ScrollSection() {
           }`}
         >
           <h3 className="text-xl font-bold text-gray-800 mb-2">
-            🎉 Community Engagement
+            🎉 Membership Discounts
           </h3>
           <p className="text-sm text-gray-600">
             Join a friendly and active community passionate about Japanese
