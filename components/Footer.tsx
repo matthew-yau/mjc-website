@@ -11,9 +11,9 @@ import {
 const Footer = () => {
   return (
     <footer className="bg-[#f8fafc] text-[#727986] py-8">
-      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+      <div className="container mx-auto px-16 flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
         {/* Left Section */}
-        <div className="text-sm text-[#727986]">
+        <div className="text-sm text-[#727986] text-center md:text-left">
           Located at Monash University Clayton Campus
         </div>
 
@@ -60,8 +60,9 @@ const Footer = () => {
             <FaGithub className="h-5 w-5" />
           </a>
         </div>
+
         {/* Right Section: Copyright */}
-        <div className="text-sm text-[#727986]">
+        <div className="text-sm text-[#727986] text-center md:text-right">
           © {new Date().getFullYear()} Monash Japanese Club. All Rights
           Reserved.
         </div>

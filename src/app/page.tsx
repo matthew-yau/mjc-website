@@ -28,6 +28,13 @@ export default function Home() {
     localStorage.setItem("language", nextLanguage);
   };
 
+  const translations = {
+    sponsorsHeading: {
+      en: "2025 Sponsors",
+      jp: "2025年のスポンサー",
+    },
+  };
+
   return (
     <main className="relative bg-[#f8fafc]">
       {/* Header with language props */}
@@ -43,12 +50,8 @@ export default function Home() {
       <div className="min-h-screen bg-gray-50 py-12">
         <div className="container mx-auto text-center">
           <h1 className="text-4xl font-bold text-gray-800 mb-6">
-            Our Sponsors
+            {translations.sponsorsHeading[language]}
           </h1>
-          <p className="text-lg text-gray-600 mb-16">
-            We are grateful for the support of our amazing sponsors!
-          </p>
-
           {/* Sponsors Carousel */}
           <SponsorsSection />
         </div>

@@ -1,11 +1,29 @@
 @media (max-width: 768px) {
   .carousel-container {
-    max-width: 50%; /* Allow full width on mobile */
+    max-width: 100%; /* Allow full width on mobile */
+    padding: 0 10px; /* Add some padding for mobile */
   }
 
   .glide__slide {
-    width: 50%; /* Make each slide take full width */
+    width: 100%; /* Make each slide take full width */
     height: auto; /* Adjust height proportionally */
+  }
+
+  .glide__arrows {
+    top: 60%; /* Move arrows further down */
+    transform: translateY(-60%);
+  }
+
+  .glide__arrow--left {
+    left: 15px; /* Add a slight offset for better visibility */
+  }
+
+  .glide__arrow--right {
+    right: 15px; /* Add a slight offset for better visibility */
+  }
+
+  .glide__bullets {
+    margin-bottom: 20px; /* Add space below bullets */
   }
 }
 
@@ -36,7 +54,8 @@
 /* Move navigation arrows higher */
 .glide__arrows {
   position: absolute; /* Make arrows independent of normal layout */
-  top: -10px; /* Adjust this value to move buttons higher */
+  top: 50%; /* Center arrows vertically */
+  transform: translateY(-50%);
   width: 100%; /* Ensure arrows span the width of the carousel */
   display: flex;
   justify-content: space-between; /* Place buttons on opposite sides */
@@ -44,59 +63,80 @@
 }
 
 .glide__arrow {
-  background-color: #f6787a; /* Set the arrow background color */
-  border: 2px solid #d35a5d; /* Add a solid border */
-  border-radius: 20%; /* Make the buttons circular */
-  cursor: pointer; /* Change cursor to pointer */
+  background-color: rgba(
+    128,
+    128,
+    128,
+    0.8
+  ); /* Neutral monotone with transparency */
+  border: 2px solid rgba(100, 100, 100, 0.8); /* Border with similar tone */
+  border-radius: 50%; /* Circular shape */
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px; /* Adjust padding for size */
-  pointer-events: auto; /* Ensure buttons remain clickable */
+  padding: 10px;
+  pointer-events: auto;
   transition: all 0.3s ease; /* Smooth transition for hover effects */
+  opacity: 0.8; /* Slightly transparent */
 }
 
 .glide__arrow:hover {
-  background-color: #d35a5d; /* Darken the background on hover */
-  border-color: #b04a4d; /* Change border color on hover */
+  background-color: rgba(100, 100, 100, 1); /* Darken on hover */
+  border-color: rgba(80, 80, 80, 1); /* Change border color on hover */
+  opacity: 1; /* Remove transparency */
 }
 
 .glide__arrow svg {
-  font-size: 24px; /* Adjust icon size */
-  color: #ffffff; /* Set icon color */
+  font-size: 24px; /* Icon size */
+  color: #ffffff; /* Icon color */
   transition: color 0.3s ease; /* Smooth transition for color change */
 }
 
 .glide__arrow:hover svg {
-  color: #eeeeee; /* Lighten the icon color on hover */
+  color: #dddddd; /* Lighten the icon color on hover */
+}
+
+/* Position arrows further outside for desktop */
+@media (min-width: 769px) {
+  .glide__arrows {
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%);
+  }
+
+  .glide__arrow--left {
+    left: -100px; /* Move further outside the container */
+  }
+
+  .glide__arrow--right {
+    right: -100px; /* Move further outside the container */
+  }
 }
 
 .glide__bullets {
-  margin-top: 40px; /* Add spacing below the carousel */
-  display: flex;
-  justify-content: center; /* Center the bullets */
-  gap: 5px; /* Add spacing between bullets */
-  position: relative; /* Ensure the bullets are placed relative to the carousel */
+  margin-bottom: 40px; /* Increase space below the bullets */
 }
 
-/* Style for individual bullets */
+.button-container {
+  margin-top: 40px; /* Optional: Ensure there's enough space above the buttons */
+}
+
 .glide__bullet {
   width: 12px; /* Set bullet width */
   height: 12px; /* Set bullet height */
-  background-color: #ffffff; /* Set bullet color */
+  background-color: #cccccc; /* Light gray for better visibility */
+  border: 2px solid #888888; /* Add a darker border for contrast */
   border-radius: 50%; /* Make bullets circular */
-  transition: background-color 0.3s ease; /* Add smooth hover effect */
-  cursor: pointer; /* Change cursor to pointer */
-  border: 2px solid #d35a5d; /* Optional: Add border */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Add smooth hover effects */
+  cursor: pointer; /* Pointer cursor for interactivity */
 }
 
-/* Change color of active bullet */
 .glide__bullet--active {
-  background-color: #d35a5d; /* Highlight active bullet */
-  border-color: #b04a4d; /* Optional: Change border color of active bullet */
+  background-color: #ff5757; /* Bright red to highlight the active bullet */
+  border-color: #cc4545; /* Complementary darker border for the active bullet */
 }
 
-/* Hover effect for bullets */
 .glide__bullet:hover {
-  background-color: #d35a5d; /* Darken on hover */
+  background-color: #aaaaaa; /* Darker gray on hover */
+  transform: scale(1.2); /* Slightly enlarge the bullet */
 }

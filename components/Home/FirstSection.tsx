@@ -59,9 +59,10 @@ export default function FirstSection({ language }: { language: "en" | "jp" }) {
                   : "モナッシュ日本クラブへ"}
               </h2>
             </div>
-            <h1 className="text-[#1f1f1f] font-bold text-8xl mb-8 leading-tight z-20 -translate-x-16 translate-y-16 animate-slideUpFade">
+            <h1 className="whitespace-nowrap text-[#1f1f1f] font-bold text-8xl mb-8 leading-tight z-20 -translate-x-16 translate-y-16 animate-slideUpFade">
               {language === "jp" ? "ようこそ" : "ようこそ"}
             </h1>
+
             {/* Overlapping Circles */}
             <div className="absolute top-0 left-0 -translate-x-56 -translate-y-8 w-36 h-36 bg-[#75C9FE] rounded-full z-10"></div>
             <div className="absolute top-0 left-0 -translate-x-36 translate-y-4 w-44 h-44 bg-[#f6787a] rounded-full z-0"></div>
