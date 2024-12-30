@@ -30,9 +30,9 @@ const TeamPage: React.FC = () => {
 
       {/* Main Content */}
       <main className="flex-grow flex items-center justify-center">
-        <div className="w-full max-w-5xl mb-16 p-4">
+        <div className="w-full max-w-5xl -mt-32 p-4">
           {/* Title */}
-          <h1 className="text-3xl font-bold text-center mb-8">
+          <h1 className="text-3xl font-bold text-center mb-4">
             {language === "en"
               ? "2025 Executive Committee"
               : "2025年度役員委員会"}
