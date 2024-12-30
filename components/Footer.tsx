@@ -7,6 +7,7 @@ import {
   FaDiscord,
   FaGithub,
 } from "react-icons/fa";
+import { MdOutlineEmail } from "react-icons/md";
 
 const Footer = () => {
   return (
@@ -19,6 +20,12 @@ const Footer = () => {
 
         {/* Middle Section: Social Icons */}
         <div className="flex space-x-4">
+          <a
+            href="mailto:japanese@monashclubs.org"
+            className="hover:text-red-500 transition-colors"
+          >
+            <MdOutlineEmail className="h-5 w-5" />
+          </a>
           <a
             href="https://www.facebook.com/MonashJapanese"
             target="_blank"

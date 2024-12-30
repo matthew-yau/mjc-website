@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
+import { Accordion, AccordionItem } from "@nextui-org/react";
 
 interface FAQProps {
   language: "en" | "jp";
 }
 
 const FAQ: React.FC<FAQProps> = ({ language }) => {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
   const faqs = [
     {
       question: {
@@ -90,56 +89,53 @@ const FAQ: React.FC<FAQProps> = ({ language }) => {
     },
   ];
 
-  const toggleFAQ = (index: number) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
-
   return (
     <div
-      className="faq-container bg-white p-4 md:p-6 rounded-lg shadow-md mt-4 mx-auto h-auto"
+      className="faq-container bg-white p-4 md:p-6 rounded-lg shadow-md mt-4 mx-auto"
       style={{
-        width: "95%", // Default for mobile
-        maxWidth: "1200px", // Fixed width for desktop
+        width: "100%",
+        maxWidth: "1000px",
+        overflow: "hidden",
+        boxSizing: "border-box",
       }}
     >
       <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-4 text-center">
         {language === "en" ? "Frequently Asked Questions" : "よくある質問"}
       </h2>
-      <ul className="space-y-4">
+      <Accordion
+        style={{
+          width: "100%",
+          maxWidth: "490px",
+        }}
+      >
         {faqs.map((faq, index) => (
-          <li
+          <AccordionItem
             key={index}
-            className="border-b border-gray-300 pb-4"
+            aria-label={`Accordion ${index + 1}`}
+            title={
+              <div style={{ textAlign: "left", fontWeight: "semi-bold" }}>
+                {faq.question[language]}
+              </div>
+            }
             style={{
-              minHeight: "60px", // Minimum height to maintain consistency
-              transition: "height 0.3s ease",
+              maxWidth: "490px",
+              overflow: "hidden",
             }}
           >
-            <button
-              className="flex justify-between items-center w-full text-left text-base md:text-lg font-medium text-gray-800"
-              onClick={() => toggleFAQ(index)}
+            <p
+              className="text-sm md:text-base text-gray-600"
+              style={{
+                wordWrap: "break-word",
+                overflowWrap: "break-word",
+                maxWidth: "100%",
+                textAlign: "left", // Ensure the content aligns left as well
+              }}
             >
-              {faq.question[language]}
-              <span className="ml-4 text-gray-500">
-                {activeIndex === index ? "-" : "+"}
-              </span>
-            </button>
-            {activeIndex === index && (
-              <div
-                className="mt-2"
-                style={{
-                  maxWidth: "100%", // Prevent content from exceeding the container width
-                  wordWrap: "break-word", // Handle long words gracefully
-                }}
-              >
-                <p className="text-sm md:text-base text-gray-600">
-                  {faq.answer[language]}
-                </p>
-              </div>
-            )}
-          </li>
+              {faq.answer[language]}
+            </p>
+          </AccordionItem>
         ))}
-      </ul>
+      </Accordion>
     </div>
   );
 };
