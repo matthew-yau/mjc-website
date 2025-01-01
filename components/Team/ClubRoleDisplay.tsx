@@ -165,22 +165,8 @@ const ClubRoleDisplay = ({ language }: { language: "en" | "jp" }) => {
 
   return (
     <div className="flex flex-col md:flex-row w-full p-4">
-      <div className="hidden md:block w-1/4 p-4 border-r pr-8 mr-16">
-        {roles.map((role) => (
-          <div
-            key={role.role.en}
-            className={`cursor-pointer p-2 ${
-              selectedRole.role.en === role.role.en
-                ? "text-black font-bold"
-                : "text-gray-500"
-            } hover:bg-gray-200`}
-            onClick={() => setSelectedRole(role)}
-          >
-            {language === "en" ? role.role.en : role.role.jp}
-          </div>
-        ))}
-      </div>
-      <div className="block md:hidden mb-4">
+      {/* Mobile Dropdown */}
+      <div className="block md:hidden mb-6 px-4">
         <select
           className="w-full p-2 border rounded-md"
           value={selectedRole.role.en}
@@ -198,7 +184,27 @@ const ClubRoleDisplay = ({ language }: { language: "en" | "jp" }) => {
           ))}
         </select>
       </div>
+
+      {/* Sidebar for Desktop */}
+      <div className="hidden md:block w-1/4 p-4 border-r pr-8 mr-16">
+        {roles.map((role) => (
+          <div
+            key={role.role.en}
+            className={`cursor-pointer p-2 ${
+              selectedRole.role.en === role.role.en
+                ? "text-black font-bold"
+                : "text-gray-500"
+            } hover:bg-gray-200`}
+            onClick={() => setSelectedRole(role)}
+          >
+            {language === "en" ? role.role.en : role.role.jp}
+          </div>
+        ))}
+      </div>
+
+      {/* Content Section */}
       <div className="flex flex-col md:flex-row flex-1 gap-8 p-4">
+        {/* Image */}
         <div className="flex-shrink-0 md:w-72 md:h-72">
           <img
             src={selectedRole.imageUrl}
@@ -208,6 +214,8 @@ const ClubRoleDisplay = ({ language }: { language: "en" | "jp" }) => {
             draggable="false"
           />
         </div>
+
+        {/* Text Content */}
         <div className="flex-1">
           <h3 className="text-xl font-semibold text-gray-800">
             {language === "en" ? selectedRole.role.en : selectedRole.role.jp}
