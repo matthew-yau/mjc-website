@@ -85,7 +85,7 @@ export default function SecondSection() {
                 description="Build lasting friendships and connect with like-minded individuals through vibrant gatherings, games, and cultural celebrations."
               />
               <ActivityBox
-                icon="/images/matcha.jpg"
+                icon="/images/matcha.png"
                 title="🌸 Cultural Events"
                 description="Immerse yourself in our Japanese cultural events such as tea ceremonies, calligraphy, and movie screenings."
               />
