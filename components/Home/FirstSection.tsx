@@ -34,7 +34,7 @@ export default function FirstSection({ language }: { language: "en" | "jp" }) {
       } relative h-[calc(100vh-88px)] bg-[#FAFAFA] px-4 sm:px-8`}
     >
       {/* Torii Image at Bottom-Right */}
-      <div className="absolute top-[calc(100%-200px)] sm:top-[calc(100%-493px)] right-0">
+      <div className="absolute w-600 h-600 top-[calc(100%-300px)] sm:top-[calc(100%-493px)] right-0">
         <img
           src="/images/tori.png"
           alt="Torii Gate"
