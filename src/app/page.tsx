@@ -33,6 +33,10 @@ export default function Home() {
       en: "2025 Sponsors",
       jp: "2025年のスポンサー",
     },
+    followUsOnInstagram: {
+      en: "Follow us on Instagram",
+      jp: "Instagramでフォローしてください",
+    },
   };
 
   return (
@@ -47,7 +51,7 @@ export default function Home() {
 
       <InfiniteScroll />
       <BuyMembershipSection backgroundImage="/images/banner.png" year="2025" />
-      <div className="min-h-screen bg-gray-50 py-12">
+      <div className="bg-gray-50 py-12">
         <div className="container mx-auto text-center">
           <h1 className="text-4xl font-bold text-gray-800 mb-6">
             {translations.sponsorsHeading[language]}
@@ -59,8 +63,16 @@ export default function Home() {
 
       {/* Embed IG Widget */}
       {process.env.NEXT_PUBLIC_IG_WIDGET_REF && (
-        <IGWidget dataRef={process.env.NEXT_PUBLIC_IG_WIDGET_REF} />
+        <div className="py-8">
+          <h2 className="text-4xl font-bold text-center text-gray-800 mt-8">
+            {translations.followUsOnInstagram[language]}
+          </h2>
+          <div>
+            <IGWidget dataRef={process.env.NEXT_PUBLIC_IG_WIDGET_REF} />
+          </div>
+        </div>
       )}
+
       <Footer />
     </main>
   );

@@ -10,6 +10,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      writingMode: {
+        vertical: "vertical-rl",
+        horizontal: "horizontal-tb",
+      },
       fontFamily: {
         mplus: ['"M PLUS 1p"', "sans-serif"], // Custom font for Japanese
       },

@@ -96,11 +96,17 @@ export default function Header({
         {/* Right Section */}
         <div className="flex items-center gap-2 md:gap-4">
           <button
-            onClick={handleToggleLanguage}
+            onClick={() => {
+              handleToggleLanguage(); // Call your existing toggle language logic
+              if (document.activeElement instanceof HTMLElement) {
+                document.activeElement.blur(); // Ensure the active element loses focus
+              }
+            }}
             className="border border-gray-300 px-3 py-2 text-xs md:text-sm font-lato font-medium text-gray-800 hover:bg-gray-200 transition duration-300 rounded-md w-16 md:w-20 text-center"
           >
             {language === "en" ? "English" : "日本語"}
           </button>
+
           <a
             href="https://clubs.msa.monash.edu/organisation/7786/"
             target="_blank"
