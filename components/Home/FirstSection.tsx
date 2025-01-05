@@ -1,7 +1,6 @@
 "use client";
 import React, { useRef } from "react";
 import useIsVisible from "@/hooks/useIsVisible";
-import Link from "next/link";
 import { MdOutlineEmail } from "react-icons/md";
 import {
   FaFacebookF,
