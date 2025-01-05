@@ -53,10 +53,6 @@ export default function SecondSection() {
         <div className="px-4 md:px-8 pb-20 md:pb-0">
           <div className="container mx-auto px-4 md:px-8 flex flex-col justify-center h-full">
             <div className="container">
-              {/* Title Section */}
-              <p className="text-[#FA5050] text-xl md:text-2xl font-semibold text-center md:text-left leading-tight max-w-lg mx-auto md:ml-64">
-                活動報告
-              </p>
               <h2 className="text-black text-2xl md:text-4xl font-bold text-center md:text-left leading-tight max-w-lg mx-auto md:ml-64 mt-4">
                 Dive into Japanese Language and Culture with us!
               </h2>

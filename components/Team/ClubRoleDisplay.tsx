@@ -16,7 +16,7 @@ const roles: RoleDetails[] = [
     role: { en: "President", jp: "会長" },
     name: { en: "Eugene Wang", jp: "ユージン・ワン" },
     degree: {
-      en: "Majors: Laws (Honours), Commerce, and Diploma of Languages (Japanese)",
+      en: "Degrees: Laws (Honours), Commerce, and Diploma of Languages (Japanese)",
       jp: "専攻: 法学（優等）、商学、言語学ディプロマ（日本語）",
     },
     imageUrl: "/images/place-holder.png",
@@ -30,7 +30,7 @@ const roles: RoleDetails[] = [
     role: { en: "Vice President", jp: "副会長" },
     name: { en: "Ain Mohiddin", jp: "アイン・モヒディン" },
     degree: {
-      en: "Majors: Laws (Honours) and Commerce",
+      en: "Degrees: Laws (Honours) and Commerce",
       jp: "専攻: 法学（優等）および商学",
     },
     imageUrl: "/images/place-holder.png",
@@ -44,7 +44,7 @@ const roles: RoleDetails[] = [
     role: { en: "Treasurer", jp: "会計担当" },
     name: { en: "Yanling Chen", jp: "ヤンリン・チェン" },
     degree: {
-      en: "Majors: Commerce and Biomedical Science",
+      en: "Degrees: Commerce and Biomedical Science",
       jp: "専攻: 商学および生物医学科学",
     },
     imageUrl: "/images/place-holder.png",
@@ -58,7 +58,7 @@ const roles: RoleDetails[] = [
     role: { en: "Assistant Treasurer", jp: "会計補佐" },
     name: { en: "Ethan Wong", jp: "イーサン・ウォン" },
     degree: {
-      en: "Major: Accounting",
+      en: "Degree: Accounting",
       jp: "専攻: 会計",
     },
     imageUrl: "/images/place-holder.png",
@@ -72,7 +72,7 @@ const roles: RoleDetails[] = [
     role: { en: "Secretary", jp: "書記" },
     name: { en: "Lin Nakayama", jp: "リン・中山" },
     degree: {
-      en: "Major: Science",
+      en: "Degree: Science",
       jp: "専攻: 理学",
     },
     imageUrl: "/images/place-holder.png",
@@ -86,7 +86,7 @@ const roles: RoleDetails[] = [
     role: { en: "Marketing Director", jp: "マーケティング担当" },
     name: { en: "Chinatsu Kanasaka", jp: "金坂千夏" },
     degree: {
-      en: "Majors: Secondary Education and Arts",
+      en: "Degrees: Secondary Education and Arts",
       jp: "専攻: 中等教育および文学",
     },
     imageUrl: "/images/place-holder.png",
@@ -100,7 +100,7 @@ const roles: RoleDetails[] = [
     role: { en: "Events Director", jp: "イベント担当" },
     name: { en: "Teruki Yamashita", jp: "山下輝" },
     degree: {
-      en: "Majors: Radiography and Medical Imaging",
+      en: "Degrees: Radiography and Medical Imaging",
       jp: "専攻: 放射線撮影および医療画像学",
     },
     imageUrl: "/images/place-holder.png",
@@ -114,7 +114,7 @@ const roles: RoleDetails[] = [
     role: { en: "Sponsorship Director", jp: "スポンサーシップ担当" },
     name: { en: "Konon Kuboi", jp: "窪井湖音" },
     degree: {
-      en: "Majors: Arts and Global Studies",
+      en: "Degrees: Arts and Global Studies",
       jp: "専攻: 文学および国際学",
     },
     imageUrl: "/images/place-holder.png",
@@ -128,7 +128,7 @@ const roles: RoleDetails[] = [
     role: { en: "Education Director", jp: "教育担当" },
     name: { en: "Sara Ando", jp: "安藤サラ" },
     degree: {
-      en: "Majors: Secondary and Primary Education (Special and Inclusive Education)",
+      en: "Degrees: Secondary and Primary Education (Special and Inclusive Education)",
       jp: "専攻: 中等および初等教育（特別支援教育およびインクルーシブ教育）",
     },
     imageUrl: "/images/place-holder.png",
@@ -141,7 +141,7 @@ const roles: RoleDetails[] = [
     role: { en: "IT Director", jp: "IT担当" },
     name: { en: "Matthew Yau", jp: "マシュー・ヤウ" },
     degree: {
-      en: "Majors: Commerce, Computer Science, and Diploma of Languages (Japanese)",
+      en: "Degrees: Commerce, Computer Science, and Diploma of Languages (Japanese)",
       jp: "専攻: 商学、コンピュータ科学、言語学ディプロマ（日本語）",
     },
     imageUrl: "/images/place-holder.png",
