@@ -107,3 +107,24 @@ html {
   max-width: 80%; /* Make the images slightly smaller */
   height: auto; /* Maintain aspect ratio */
 }
+
+.custom-shape-divider-bottom-1736080053 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1736080053 svg {
+  position: relative;
+  display: block;
+  width: calc(137% + 1.3px);
+  height: 130px;
+  transform: rotate(180deg); /* Flip the divider */
+}
+
+.custom-shape-divider-bottom-1736080053 .shape-fill {
+  fill: #bad7ff; /* Your desired color */
+}

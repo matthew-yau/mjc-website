@@ -2,6 +2,14 @@
 import React, { useRef } from "react";
 import useIsVisible from "@/hooks/useIsVisible";
 import Link from "next/link";
+import { MdOutlineEmail } from "react-icons/md";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedin,
+  FaDiscord,
+  FaGithub,
+} from "react-icons/fa";
 
 export default function FirstSection({ language }: { language: "en" | "jp" }) {
   const ref1 = useRef<HTMLDivElement>(null);
@@ -11,10 +19,6 @@ export default function FirstSection({ language }: { language: "en" | "jp" }) {
     heading: {
       en: "Welcome to the Monash Japanese Club!",
       jp: "モナッシュ日本クラブへようこそ！",
-    },
-    paragraph1: {
-      en: "At MJC, we aim to cultivate and enrich people's understanding and passion towards all things Japanese.",
-      jp: "MJCでは、日本のすべてに対する人々の理解と情熱を育み、豊かにすることを目指しています。",
     },
     paragraph2: {
       en: "We pride ourselves on maintaining a fun, friendly environment for everyone interested in Japanese culture and building a bridge between Australia-Japan relations.",
@@ -34,11 +38,11 @@ export default function FirstSection({ language }: { language: "en" | "jp" }) {
       } relative h-[calc(100vh-88px)] bg-[#FAFAFA] px-4 sm:px-8`}
     >
       {/* Torii Image at Bottom-Right */}
-      <div className="absolute w-600 h-600 top-[calc(100%-300px)] sm:top-[calc(100%-493px)] right-0">
+      <div className="absolute w-[1000px] h-[1000px] top-[calc(100%-300px)] sm:top-[calc(100%-630px)] right-10 sm:right-20">
         <img
           src="/images/tori.png"
           alt="Torii Gate"
-          className="w-[300px] sm:w-[600px] md:w-[800px]"
+          className="w-full max-w-[300px] sm:max-w-[600px] md:max-w-[800px] lg:max-w-[1000px]"
         />
       </div>
       {/* Centered Content */}
@@ -68,17 +72,73 @@ export default function FirstSection({ language }: { language: "en" | "jp" }) {
               <h3 className="text-black font-bold text-2xl sm:text-3xl mb-2 sm:mb-4">
                 {translations.heading[language]}
               </h3>
-              <p>{translations.paragraph1[language]}</p>
               <p className="mt-2 sm:mt-4">
                 {translations.paragraph2[language]}
               </p>
-              <Link href="/about">
-                <button className="btn btn-layered-3d btn-layered-3d--red mt-4 sm:mt-8 px-2 sm:px-3 py-1 text-xs sm:text-sm whitespace-nowrap">
-                  {translations.learnMore[language]}
-                </button>
-              </Link>
+
+              {/* Grey Divider Line */}
+              <div className="w-full h-px bg-gray-300 my-6"></div>
+
+              <div className="flex items-center justify-end space-x-4 sm:mr-8 mr-4">
+                {/* Social Links */}
+                <div className="flex space-x-4">
+                  <a
+                    href="mailto:japanese@monashclubs.org"
+                    className="hover:text-red-500 transition-colors"
+                  >
+                    <MdOutlineEmail className="h-5 w-5" />
+                  </a>
+                  <a
+                    href="https://www.facebook.com/MonashJapanese"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-red-500 transition-colors"
+                  >
+                    <FaFacebookF className="h-5 w-5" />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/monashjapaneseclub/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-red-500 transition-colors"
+                  >
+                    <FaInstagram className="h-5 w-5" />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/monash-japanese-club/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-red-500 transition-colors"
+                  >
+                    <FaLinkedin className="h-5 w-5" />
+                  </a>
+                  <a
+                    href="https://discord.gg/7t6jyMgz3c"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-red-500 transition-colors"
+                  >
+                    <FaDiscord className="h-5 w-5" />
+                  </a>
+                  <a
+                    href="https://github.com/matthew-yau/mjc-website"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-red-500 transition-colors"
+                  >
+                    <FaGithub className="h-5 w-5" />
+                  </a>
+                </div>
+                {/* Learn More Button
+                <Link href="/about">
+                  <button className="btn btn-layered-3d btn-layered-3d--red px-4 py-2 text-sm whitespace-nowrap">
+                    {translations.learnMore[language]}
+                  </button>
+                </Link> */}
+              </div>
             </div>
           </div>
+
           {/* Right Column */}
           <div className="hidden sm:flex flex-col items-center sm:items-start justify-center relative">
             <div className="relative w-full h-auto z-10">
@@ -102,6 +162,31 @@ export default function FirstSection({ language }: { language: "en" | "jp" }) {
           </div>
         </section>
       </div>
+      {/* Divider */}
+      <div className="custom-shape-divider-bottom-1736080053">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+          className="w-full h-16 md:h-48"
+        >
+          <path
+            d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+            opacity=".25"
+            className="shape-fill"
+          ></path>
+          <path
+            d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+            opacity=".5"
+            className="shape-fill"
+          ></path>{" "}
+          <path
+            d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+            className="shape-fill"
+          ></path>{" "}
+        </svg>{" "}
+      </div>{" "}
     </div>
   );
 }

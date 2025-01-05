@@ -46,6 +46,7 @@ export default function Home() {
 
       {/* First Page - White Section */}
       <FirstSection language={language} />
+
       {/* Second Page - Blue Section */}
       <SecondSection />
 
