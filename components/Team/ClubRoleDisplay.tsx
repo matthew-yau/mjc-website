@@ -169,7 +169,25 @@ const ClubRoleDisplay = ({ language }: { language: "en" | "jp" }) => {
       <h1 className="text-3xl font-bold text-center mb-8">
         {language === "en" ? "2025 Executive Committee" : "2025年度役員委員会"}
       </h1>
-
+      {/* Mobile Role Selection Dropdown */}
+      <div className="block md:hidden mb-6">
+        <select
+          className="w-full p-2 border rounded-md"
+          value={selectedRole.role.en}
+          onChange={(e) => {
+            const selected = roles.find(
+              (role) => role.role.en === e.target.value
+            );
+            if (selected) setSelectedRole(selected);
+          }}
+        >
+          {roles.map((role) => (
+            <option key={role.role.en} value={role.role.en}>
+              {language === "en" ? role.role.en : role.role.jp}
+            </option>
+          ))}
+        </select>
+      </div>
       {/* Main Role Display Section */}
       <div className="flex flex-col md:flex-row w-full mb-8">
         {/* Sidebar for Desktop */}
@@ -240,64 +258,363 @@ const ClubRoleDisplay = ({ language }: { language: "en" | "jp" }) => {
 
         {/* Committees Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Committee 1 */}
-          <div className="text-center">
-            <div className="w-full h-48 mx-auto rounded-lg bg-gray-300 duration-500 hover:scale-150 hover:shadow-xl"></div>
-            <h3 className="text-xl font-bold mt-4">2024</h3>
-            <p className="text-gray-600 mt-2">
-              From left to right, top to bottom: John Smith, Jane Doe, Michael
-              Brown...
-            </p>
+          {/* 2024 */}
+          <div className="p-6 bg-gray-100 rounded-lg shadow-lg">
+            <h3 className="text-xl font-bold mb-4 text-center">2024</h3>
+            <ul className="text-gray-700">
+              <li>
+                <span className="font-semibold">President:</span> Samantha Xu
+              </li>
+              <li>
+                <span className="font-semibold">Vice President:</span> Haya
+                Weeraratne
+              </li>
+              <li>
+                <span className="font-semibold">Treasurer:</span> Ain Mohiddin
+              </li>
+              <li>
+                <span className="font-semibold">Secretary:</span> Eugene Wang
+              </li>
+              <li>
+                <span className="font-semibold">Assistant Treasurer:</span> Theo
+                Gunawan
+              </li>
+              <li>
+                <span className="font-semibold">Marketing Officer:</span> Hikari
+                Hyodo
+              </li>
+              <li>
+                <span className="font-semibold">Events Officer:</span> Ethan
+                Wong
+              </li>
+              <li>
+                <span className="font-semibold">Education Officer:</span> Joanne
+                Lee
+              </li>
+              <li>
+                <span className="font-semibold">Sponsorship Officer:</span>{" "}
+                Yanling Chen
+              </li>
+              <li>
+                <span className="font-semibold">IT Officer:</span> Paul Zheng
+              </li>
+            </ul>
           </div>
 
-          {/* Committee 2 */}
-          <div className="text-center">
-            <div className="w-full h-48 mx-auto rounded-lg bg-gray-300 duration-500 hover:scale-150 hover:shadow-xl"></div>
-            <h3 className="text-xl font-bold mt-4">2023</h3>
-            <p className="text-gray-600 mt-2">
-              From left to right, top to bottom: Alice Johnson, Bob Martin,
-              Clara Lee...
-            </p>
+          {/* 2023 */}
+          <div className="p-6 bg-gray-100 rounded-lg shadow-lg">
+            <h3 className="text-xl font-bold mb-4 text-center">2023</h3>
+            <ul className="text-gray-700">
+              <li>
+                <span className="font-semibold">President:</span> Annie Mao
+              </li>
+              <li>
+                <span className="font-semibold">Vice President:</span> Isaac
+                Barnes
+              </li>
+              <li>
+                <span className="font-semibold">Treasurer:</span> Luyan Chen
+              </li>
+              <li>
+                <span className="font-semibold">Secretary:</span> Quoc Nguyen
+              </li>
+              <li>
+                <span className="font-semibold">Assistant Treasurer:</span> Khoa
+                Nguyen
+              </li>
+              <li>
+                <span className="font-semibold">Marketing Officer:</span>{" "}
+                Caitlin Samuels
+              </li>
+              <li>
+                <span className="font-semibold">Events Officer:</span> Midori
+                Hong
+              </li>
+              <li>
+                <span className="font-semibold">Education Officer:</span>{" "}
+                Jannice Chiu
+              </li>
+              <li>
+                <span className="font-semibold">Sponsorship Officer:</span>{" "}
+                Itsuki Kashima
+              </li>
+              <li>
+                <span className="font-semibold">IT Officer:</span> Paul Zheng
+              </li>
+            </ul>
           </div>
 
-          {/* Committee 3 */}
-          <div className="text-center">
-            <div className="w-full h-48 mx-auto rounded-lg bg-gray-300 duration-500 hover:scale-150 hover:shadow-xl"></div>
-            <h3 className="text-xl font-bold mt-4">2022</h3>
-            <p className="text-gray-600 mt-2">
-              From left to right, top to bottom: Ethan Wong, Lin Nakayama,
-              Chinatsu Kanasaka...
-            </p>
+          {/* 2022 */}
+          <div className="p-6 bg-gray-100 rounded-lg shadow-lg">
+            <h3 className="text-xl font-bold mb-4 text-center">2022</h3>
+            <ul className="text-gray-700">
+              <li>
+                <span className="font-semibold">President:</span> William Giang
+              </li>
+              <li>
+                <span className="font-semibold">Vice President:</span> Annie Mao
+              </li>
+              <li>
+                <span className="font-semibold">Treasurer:</span> Quoc Nguyen
+              </li>
+              <li>
+                <span className="font-semibold">Secretary:</span> Thao Ha
+              </li>
+              <li>
+                <span className="font-semibold">Assistant Treasurer:</span>{" "}
+                Sylvia Tan
+              </li>
+              <li>
+                <span className="font-semibold">Marketing Officer:</span> Hieu
+                Ha
+              </li>
+              <li>
+                <span className="font-semibold">IT Officer:</span> James Harvey
+              </li>
+            </ul>
           </div>
 
-          {/* Committee 4 */}
-          <div className="text-center">
-            <div className="w-full h-48 mx-auto rounded-lg bg-gray-300 duration-500 hover:scale-150 hover:shadow-xl"></div>
-            <h3 className="text-xl font-bold mt-4">2021</h3>
-            <p className="text-gray-600 mt-2">
-              From left to right, top to bottom: Teruki Yamashita, Konon Kuboi,
-              Sara Ando...
-            </p>
+          {/* 2021 */}
+          <div className="p-6 bg-gray-100 rounded-lg shadow-lg">
+            <h3 className="text-xl font-bold mb-4 text-center">2021</h3>
+            <ul className="text-gray-700">
+              <li>
+                <span className="font-semibold">President:</span> Tommy Nguyen
+              </li>
+              <li>
+                <span className="font-semibold">Vice President:</span> Jasmine
+                Pearman
+              </li>
+              <li>
+                <span className="font-semibold">Treasurer:</span> Patrick Lieu
+              </li>
+              <li>
+                <span className="font-semibold">Secretary:</span> Yoshiya Mori
+              </li>
+              <li>
+                <span className="font-semibold">Education Officer:</span>{" "}
+                William Giang
+              </li>
+              <li>
+                <span className="font-semibold">Assistant Treasurer:</span>{" "}
+                Sylvia Tan
+              </li>
+              <li>
+                <span className="font-semibold">Sponsorship Officer:</span> Hieu
+                Ha
+              </li>
+              <li>
+                <span className="font-semibold">Marketing Officer:</span>{" "}
+                Sereena Chhor
+              </li>
+              <li>
+                <span className="font-semibold">IT Officer:</span> James Harvey
+              </li>
+            </ul>
           </div>
 
-          {/* Committee 5 */}
-          <div className="text-center">
-            <div className="w-full h-48 mx-auto rounded-lg bg-gray-300 duration-500 hover:scale-150 hover:shadow-xl"></div>
-            <h3 className="text-xl font-bold mt-4">2020</h3>
-            <p className="text-gray-600 mt-2">
-              From left to right, top to bottom: Matthew Yau, Eugene Wang, Ain
-              Mohiddin...
-            </p>
+          {/* Add remaining years similarly */}
+          {/* 2020 */}
+          <div className="p-6 bg-gray-100 rounded-lg shadow-lg">
+            <h3 className="text-xl font-bold mb-4 text-center">2020</h3>
+            <ul className="text-gray-700">
+              <li>
+                <span className="font-semibold">President:</span> Tommy Nguyen
+              </li>
+              <li>
+                <span className="font-semibold">Vice President:</span> Felicia
+                Adiputra
+              </li>
+              <li>
+                <span className="font-semibold">Treasurer:</span> Jessica Yao
+              </li>
+              <li>
+                <span className="font-semibold">Secretary:</span> Yoshiya Mori
+              </li>
+              <li>
+                <span className="font-semibold">Assistant Treasurer:</span>{" "}
+                Patrick Lieu
+              </li>
+              <li>
+                <span className="font-semibold">Events Officer:</span> Kai
+                Inglis
+              </li>
+              <li>
+                <span className="font-semibold">Marketing Officer:</span>{" "}
+                Jasmine Pearman
+              </li>
+              <li>
+                <span className="font-semibold">IT Officer:</span> Sereena Chhor
+              </li>
+            </ul>
           </div>
 
-          {/* Committee 6 */}
-          <div className="text-center">
-            <div className="w-full h-48 mx-auto rounded-lg bg-gray-300 duration-500 hover:scale-150 hover:shadow-xl"></div>
-            <h3 className="text-xl font-bold mt-4">2019</h3>
-            <p className="text-gray-600 mt-2">
-              From left to right, top to bottom: Yanling Chen, Ethan Wong, Lin
-              Nakayama...
-            </p>
+          {/* 2019 */}
+          <div className="p-6 bg-gray-100 rounded-lg shadow-lg">
+            <h3 className="text-xl font-bold mb-4 text-center">2019</h3>
+            <ul className="text-gray-700">
+              <li>
+                <span className="font-semibold">President:</span> Jessica Yao
+              </li>
+              <li>
+                <span className="font-semibold">Vice President:</span> Patrick
+                Lieu
+              </li>
+              <li>
+                <span className="font-semibold">Treasurer:</span> Felicia
+                Adiputra
+              </li>
+              <li>
+                <span className="font-semibold">Secretary:</span> Aichi
+                Tsuchihira
+              </li>
+              <li>
+                <span className="font-semibold">Assistant Treasurer:</span>{" "}
+                Yoshiya Mori
+              </li>
+              <li>
+                <span className="font-semibold">Marketing Officer:</span>{" "}
+                Jasmine Pearman
+              </li>
+              <li>
+                <span className="font-semibold">Events Officer:</span> Tommy
+                Nguyen
+              </li>
+              <li>
+                <span className="font-semibold">Sponsorship Officer:</span> Nao
+                Hisada
+              </li>
+              <li>
+                <span className="font-semibold">Education Officer:</span> James
+                Amodeo
+              </li>
+              <li>
+                <span className="font-semibold">IT Officer:</span> Sereena Chhor
+              </li>
+            </ul>
+          </div>
+
+          {/* 2010 */}
+          <div className="p-6 bg-gray-100 rounded-lg shadow-lg">
+            <h3 className="text-xl font-bold mb-4 text-center">2010</h3>
+            <ul className="text-gray-700">
+              <li>
+                <span className="font-semibold">President:</span> Saori
+                Mizoguchi
+              </li>
+              <li>
+                <span className="font-semibold">Vice President:</span> Lola
+                Sundin
+              </li>
+              <li>
+                <span className="font-semibold">Treasurer:</span> Kai Feng Hoa
+              </li>
+              <li>
+                <span className="font-semibold">Secretary:</span> Shimpei
+                Yamashita
+              </li>
+              <li>
+                <span className="font-semibold">Event Coordinators:</span> Mandy
+                Wong, Kasumi Umehara and Fiona McCandless
+              </li>
+              <li>
+                <span className="font-semibold">Publicity Officer:</span> Eri
+                Ichise
+              </li>
+              <li>
+                <span className="font-semibold">Liason Officer:</span> Chris
+                Kelly
+              </li>
+              <li>
+                <span className="font-semibold">Newsletter Editor:</span> Juan
+                Ospina
+              </li>
+              <li>
+                <span className="font-semibold">IT Officer:</span> Stuart
+                Shattock
+              </li>
+            </ul>
+          </div>
+
+          {/* 2010 */}
+          <div className="p-6 bg-gray-100 rounded-lg shadow-lg">
+            <h3 className="text-xl font-bold mb-4 text-center">2009</h3>
+            <ul className="text-gray-700">
+              <li>
+                <span className="font-semibold">President:</span> Katja Petrovic
+              </li>
+              <li>
+                <span className="font-semibold">Vice President:</span> Krystle
+                Chua
+              </li>
+              <li>
+                <span className="font-semibold">Treasurer:</span> Lola Sundin
+              </li>
+              <li>
+                <span className="font-semibold">Secretary:</span> Andrew Ooi
+              </li>
+              <li>
+                <span className="font-semibold">Event Coordinators:</span>{" "}
+                Andrew Baillie, Scott Godinagh and Fiona McCandless
+              </li>
+              <li>
+                <span className="font-semibold">Publicity Officer:</span> Henry
+                Chen
+              </li>
+              <li>
+                <span className="font-semibold">Liason Officer:</span> Paul
+                Tucker
+              </li>
+              <li>
+                <span className="font-semibold">Newsletter Editor:</span> Tim
+                Wallis
+              </li>
+              <li>
+                <span className="font-semibold">IT Officer:</span> Stuart
+                Shattock
+              </li>
+            </ul>
+          </div>
+
+          {/* 2008 */}
+          <div className="p-6 bg-gray-100 rounded-lg shadow-lg">
+            <h3 className="text-xl font-bold mb-4 text-center">2008</h3>
+            <ul className="text-gray-700">
+              <li>
+                <span className="font-semibold">President:</span> Bradford
+                Chrisafis
+              </li>
+              <li>
+                <span className="font-semibold">Vice President: </span> Orie
+              </li>
+              <li>
+                <span className="font-semibold">Treasurer: </span> Katja
+                Petrovic
+              </li>
+              <li>
+                <span className="font-semibold">Secretary: </span> Tom
+              </li>
+              <li>
+                <span className="font-semibold">Event Coordinators: </span>{" "}
+                Mari, Matthew Bode and Warwick
+              </li>
+              <li>
+                <span className="font-semibold">Publicity Officer: </span>
+                Natalie
+              </li>
+              <li>
+                <span className="font-semibold">Liason Officer: </span>
+                Krystle
+              </li>
+              <li>
+                <span className="font-semibold">Newsletter Editor: </span>
+                Tim Wallis
+              </li>
+              <li>
+                <span className="font-semibold">IT Officer: </span>
+                Ryuichi
+              </li>
+            </ul>
           </div>
         </div>
       </div>

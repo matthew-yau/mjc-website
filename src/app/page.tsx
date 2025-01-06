@@ -64,11 +64,11 @@ export default function Home() {
 
       {/* Embed IG Widget */}
       {process.env.NEXT_PUBLIC_IG_WIDGET_REF && (
-        <div className="py-8">
-          <h2 className="text-4xl font-bold text-center text-gray-800 mt-8">
+        <div className="py-8 bg-gradient-to-br from-orange-500 via-pink-500 to-pink-600 min-h-screen">
+          <h2 className="text-4xl font-bold text-center text-white mt-8">
             {translations.followUsOnInstagram[language]}
           </h2>
-          <div>
+          <div className="mt-8">
             <IGWidget dataRef={process.env.NEXT_PUBLIC_IG_WIDGET_REF} />
           </div>
         </div>
