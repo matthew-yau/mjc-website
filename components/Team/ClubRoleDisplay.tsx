@@ -164,85 +164,141 @@ const ClubRoleDisplay = ({ language }: { language: "en" | "jp" }) => {
   if (!hasMounted) return null;
 
   return (
-    <div className="flex flex-col md:flex-row w-full p-4">
-      {/* Mobile Dropdown */}
-      <div className="block md:hidden mb-6 px-4">
-        <select
-          className="w-full p-2 border rounded-md"
-          value={selectedRole.role.en}
-          onChange={(e) => {
-            const selected = roles.find(
-              (role) => role.role.en === e.target.value
-            );
-            if (selected) setSelectedRole(selected);
-          }}
-        >
+    <div className="flex flex-col w-full p-4 -mt-24">
+      {/* Title Header */}
+      <h1 className="text-3xl font-bold text-center mb-8">
+        {language === "en" ? "2025 Executive Committee" : "2025年度役員委員会"}
+      </h1>
+
+      {/* Main Role Display Section */}
+      <div className="flex flex-col md:flex-row w-full mb-8">
+        {/* Sidebar for Desktop */}
+        <div className="hidden md:block w-1/4 p-4 border-r pr-8 mr-16">
           {roles.map((role) => (
-            <option key={role.role.en} value={role.role.en}>
+            <div
+              key={role.role.en}
+              className={`cursor-pointer p-2 ${
+                selectedRole.role.en === role.role.en
+                  ? "text-black font-bold"
+                  : "text-gray-500"
+              } hover:bg-gray-200`}
+              onClick={() => setSelectedRole(role)}
+            >
               {language === "en" ? role.role.en : role.role.jp}
-            </option>
+            </div>
           ))}
-        </select>
-      </div>
-
-      {/* Sidebar for Desktop */}
-      <div className="hidden md:block w-1/4 p-4 border-r pr-8 mr-16">
-        {roles.map((role) => (
-          <div
-            key={role.role.en}
-            className={`cursor-pointer p-2 ${
-              selectedRole.role.en === role.role.en
-                ? "text-black font-bold"
-                : "text-gray-500"
-            } hover:bg-gray-200`}
-            onClick={() => setSelectedRole(role)}
-          >
-            {language === "en" ? role.role.en : role.role.jp}
-          </div>
-        ))}
-      </div>
-
-      {/* Content Section */}
-      <div className="flex flex-col md:flex-row flex-1 gap-8 p-4">
-        {/* Image */}
-        <div className="flex-shrink-0 md:w-72 md:h-72">
-          <img
-            src={selectedRole.imageUrl}
-            alt={`${selectedRole.role.en} portrait`}
-            className="w-full h-auto md:w-72 md:h-72 object-cover rounded-sm bg-white p-4 shadow-lg border border-gray-300"
-            onContextMenu={(e) => e.preventDefault()}
-            draggable="false"
-          />
         </div>
 
-        {/* Text Content */}
-        <div className="flex-1">
-          <h3 className="text-xl font-semibold text-gray-800">
-            {language === "en" ? selectedRole.role.en : selectedRole.role.jp}
-          </h3>
-          <h2 className="text-2xl font-bold mt-2 flex items-center">
-            {language === "en" ? selectedRole.name.en : selectedRole.name.jp}
-            {selectedRole.linkedin && (
-              <a
-                href={selectedRole.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="ml-2 text-blue-600 hover:text-red-500"
-              >
-                <FaLinkedin size={20} />
-              </a>
-            )}
-          </h2>
-          <p className="text-sm text-gray-700 italic mt-2">
-            {language === "en"
-              ? selectedRole.degree.en
-              : selectedRole.degree.jp}
-          </p>
-          <p className="mt-4 text-gray-600">
-            {language === "en"
-              ? selectedRole.description.en
-              : selectedRole.description.jp}
-          </p>
+        {/* Content Section */}
+        <div className="flex flex-col md:flex-row flex-1 gap-8">
+          {/* Image */}
+          <div className="flex-shrink-0 md:w-72 md:h-72">
+            <img
+              src={selectedRole.imageUrl}
+              alt={`${selectedRole.role.en} portrait`}
+              className="w-full h-auto md:w-72 md:h-72 object-cover rounded-sm bg-white p-4 shadow-lg border border-gray-300"
+              onContextMenu={(e) => e.preventDefault()}
+              draggable="false"
+            />
+          </div>
+
+          {/* Text Content */}
+          <div className="flex-1">
+            <h3 className="text-xl font-semibold text-gray-800">
+              {language === "en" ? selectedRole.role.en : selectedRole.role.jp}
+            </h3>
+            <h2 className="text-2xl font-bold mt-2 flex items-center">
+              {language === "en" ? selectedRole.name.en : selectedRole.name.jp}
+              {selectedRole.linkedin && (
+                <a
+                  href={selectedRole.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ml-2 text-blue-600 hover:text-red-500"
+                >
+                  <FaLinkedin size={20} />
+                </a>
+              )}
+            </h2>
+            <p className="text-sm text-gray-700 italic mt-2">
+              {language === "en"
+                ? selectedRole.degree.en
+                : selectedRole.degree.jp}
+            </p>
+            <p className="mt-4 text-gray-600">
+              {language === "en"
+                ? selectedRole.description.en
+                : selectedRole.description.jp}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Past Committees Section */}
+      <div className="flex flex-col mt-16">
+        <h2 className="text-2xl font-bold text-center mb-8">Past Committees</h2>
+
+        {/* Committees Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Committee 1 */}
+          <div className="text-center">
+            <div className="w-full h-48 mx-auto rounded-lg bg-gray-300 duration-500 hover:scale-150 hover:shadow-xl"></div>
+            <h3 className="text-xl font-bold mt-4">2024</h3>
+            <p className="text-gray-600 mt-2">
+              From left to right, top to bottom: John Smith, Jane Doe, Michael
+              Brown...
+            </p>
+          </div>
+
+          {/* Committee 2 */}
+          <div className="text-center">
+            <div className="w-full h-48 mx-auto rounded-lg bg-gray-300 duration-500 hover:scale-150 hover:shadow-xl"></div>
+            <h3 className="text-xl font-bold mt-4">2023</h3>
+            <p className="text-gray-600 mt-2">
+              From left to right, top to bottom: Alice Johnson, Bob Martin,
+              Clara Lee...
+            </p>
+          </div>
+
+          {/* Committee 3 */}
+          <div className="text-center">
+            <div className="w-full h-48 mx-auto rounded-lg bg-gray-300 duration-500 hover:scale-150 hover:shadow-xl"></div>
+            <h3 className="text-xl font-bold mt-4">2022</h3>
+            <p className="text-gray-600 mt-2">
+              From left to right, top to bottom: Ethan Wong, Lin Nakayama,
+              Chinatsu Kanasaka...
+            </p>
+          </div>
+
+          {/* Committee 4 */}
+          <div className="text-center">
+            <div className="w-full h-48 mx-auto rounded-lg bg-gray-300 duration-500 hover:scale-150 hover:shadow-xl"></div>
+            <h3 className="text-xl font-bold mt-4">2021</h3>
+            <p className="text-gray-600 mt-2">
+              From left to right, top to bottom: Teruki Yamashita, Konon Kuboi,
+              Sara Ando...
+            </p>
+          </div>
+
+          {/* Committee 5 */}
+          <div className="text-center">
+            <div className="w-full h-48 mx-auto rounded-lg bg-gray-300 duration-500 hover:scale-150 hover:shadow-xl"></div>
+            <h3 className="text-xl font-bold mt-4">2020</h3>
+            <p className="text-gray-600 mt-2">
+              From left to right, top to bottom: Matthew Yau, Eugene Wang, Ain
+              Mohiddin...
+            </p>
+          </div>
+
+          {/* Committee 6 */}
+          <div className="text-center">
+            <div className="w-full h-48 mx-auto rounded-lg bg-gray-300 duration-500 hover:scale-150 hover:shadow-xl"></div>
+            <h3 className="text-xl font-bold mt-4">2019</h3>
+            <p className="text-gray-600 mt-2">
+              From left to right, top to bottom: Yanling Chen, Ethan Wong, Lin
+              Nakayama...
+            </p>
+          </div>
         </div>
       </div>
     </div>
