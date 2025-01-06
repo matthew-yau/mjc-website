@@ -280,23 +280,23 @@ const ClubRoleDisplay = ({ language }: { language: "en" | "jp" }) => {
                 Gunawan
               </li>
               <li>
-                <span className="font-semibold">Marketing Officer:</span> Hikari
-                Hyodo
+                <span className="font-semibold">Marketing Director:</span>{" "}
+                Hikari Hyodo
               </li>
               <li>
-                <span className="font-semibold">Events Officer:</span> Ethan
+                <span className="font-semibold">Events Director:</span> Ethan
                 Wong
               </li>
               <li>
-                <span className="font-semibold">Education Officer:</span> Joanne
-                Lee
+                <span className="font-semibold">Education Director:</span>{" "}
+                Joanne Lee
               </li>
               <li>
-                <span className="font-semibold">Sponsorship Officer:</span>{" "}
+                <span className="font-semibold">Sponsorship Director:</span>{" "}
                 Yanling Chen
               </li>
               <li>
-                <span className="font-semibold">IT Officer:</span> Paul Zheng
+                <span className="font-semibold">IT Director:</span> Paul Zheng
               </li>
             </ul>
           </div>
@@ -323,23 +323,23 @@ const ClubRoleDisplay = ({ language }: { language: "en" | "jp" }) => {
                 Nguyen
               </li>
               <li>
-                <span className="font-semibold">Marketing Officer:</span>{" "}
+                <span className="font-semibold">Marketing Director:</span>{" "}
                 Caitlin Samuels
               </li>
               <li>
-                <span className="font-semibold">Events Officer:</span> Midori
+                <span className="font-semibold">Events Director:</span> Midori
                 Hong
               </li>
               <li>
-                <span className="font-semibold">Education Officer:</span>{" "}
+                <span className="font-semibold">Education Director:</span>{" "}
                 Jannice Chiu
               </li>
               <li>
-                <span className="font-semibold">Sponsorship Officer:</span>{" "}
+                <span className="font-semibold">Sponsorship Director:</span>{" "}
                 Itsuki Kashima
               </li>
               <li>
-                <span className="font-semibold">IT Officer:</span> Paul Zheng
+                <span className="font-semibold">IT Director:</span> Paul Zheng
               </li>
             </ul>
           </div>
@@ -365,11 +365,11 @@ const ClubRoleDisplay = ({ language }: { language: "en" | "jp" }) => {
                 Sylvia Tan
               </li>
               <li>
-                <span className="font-semibold">Marketing Officer:</span> Hieu
+                <span className="font-semibold">Marketing Director:</span> Hieu
                 Ha
               </li>
               <li>
-                <span className="font-semibold">IT Officer:</span> James Harvey
+                <span className="font-semibold">IT Director:</span> James Harvey
               </li>
             </ul>
           </div>
@@ -392,7 +392,7 @@ const ClubRoleDisplay = ({ language }: { language: "en" | "jp" }) => {
                 <span className="font-semibold">Secretary:</span> Yoshiya Mori
               </li>
               <li>
-                <span className="font-semibold">Education Officer:</span>{" "}
+                <span className="font-semibold">Education Director:</span>{" "}
                 William Giang
               </li>
               <li>
@@ -400,15 +400,15 @@ const ClubRoleDisplay = ({ language }: { language: "en" | "jp" }) => {
                 Sylvia Tan
               </li>
               <li>
-                <span className="font-semibold">Sponsorship Officer:</span> Hieu
-                Ha
+                <span className="font-semibold">Sponsorship Director:</span>{" "}
+                Hieu Ha
               </li>
               <li>
-                <span className="font-semibold">Marketing Officer:</span>{" "}
+                <span className="font-semibold">Marketing Director:</span>{" "}
                 Sereena Chhor
               </li>
               <li>
-                <span className="font-semibold">IT Officer:</span> James Harvey
+                <span className="font-semibold">IT Director:</span> James Harvey
               </li>
             </ul>
           </div>
@@ -436,15 +436,16 @@ const ClubRoleDisplay = ({ language }: { language: "en" | "jp" }) => {
                 Patrick Lieu
               </li>
               <li>
-                <span className="font-semibold">Events Officer:</span> Kai
+                <span className="font-semibold">Events Director:</span> Kai
                 Inglis
               </li>
               <li>
-                <span className="font-semibold">Marketing Officer:</span>{" "}
+                <span className="font-semibold">Marketing Director:</span>{" "}
                 Jasmine Pearman
               </li>
               <li>
-                <span className="font-semibold">IT Officer:</span> Sereena Chhor
+                <span className="font-semibold">IT Director:</span> Sereena
+                Chhor
               </li>
             </ul>
           </div>
@@ -473,23 +474,24 @@ const ClubRoleDisplay = ({ language }: { language: "en" | "jp" }) => {
                 Yoshiya Mori
               </li>
               <li>
-                <span className="font-semibold">Marketing Officer:</span>{" "}
+                <span className="font-semibold">Marketing Director:</span>{" "}
                 Jasmine Pearman
               </li>
               <li>
-                <span className="font-semibold">Events Officer:</span> Tommy
+                <span className="font-semibold">Events Director:</span> Tommy
                 Nguyen
               </li>
               <li>
-                <span className="font-semibold">Sponsorship Officer:</span> Nao
+                <span className="font-semibold">Sponsorship Director:</span> Nao
                 Hisada
               </li>
               <li>
-                <span className="font-semibold">Education Officer:</span> James
+                <span className="font-semibold">Education Director:</span> James
                 Amodeo
               </li>
               <li>
-                <span className="font-semibold">IT Officer:</span> Sereena Chhor
+                <span className="font-semibold">IT Director:</span> Sereena
+                Chhor
               </li>
             </ul>
           </div>
@@ -518,11 +520,11 @@ const ClubRoleDisplay = ({ language }: { language: "en" | "jp" }) => {
                 Wong, Kasumi Umehara and Fiona McCandless
               </li>
               <li>
-                <span className="font-semibold">Publicity Officer:</span> Eri
+                <span className="font-semibold">Publicity Director:</span> Eri
                 Ichise
               </li>
               <li>
-                <span className="font-semibold">Liason Officer:</span> Chris
+                <span className="font-semibold">Liason Director:</span> Chris
                 Kelly
               </li>
               <li>
@@ -530,7 +532,7 @@ const ClubRoleDisplay = ({ language }: { language: "en" | "jp" }) => {
                 Ospina
               </li>
               <li>
-                <span className="font-semibold">IT Officer:</span> Stuart
+                <span className="font-semibold">IT Director:</span> Stuart
                 Shattock
               </li>
             </ul>
@@ -558,11 +560,11 @@ const ClubRoleDisplay = ({ language }: { language: "en" | "jp" }) => {
                 Andrew Baillie, Scott Godinagh and Fiona McCandless
               </li>
               <li>
-                <span className="font-semibold">Publicity Officer:</span> Henry
+                <span className="font-semibold">Publicity Director:</span> Henry
                 Chen
               </li>
               <li>
-                <span className="font-semibold">Liason Officer:</span> Paul
+                <span className="font-semibold">Liason Director:</span> Paul
                 Tucker
               </li>
               <li>
@@ -570,7 +572,7 @@ const ClubRoleDisplay = ({ language }: { language: "en" | "jp" }) => {
                 Wallis
               </li>
               <li>
-                <span className="font-semibold">IT Officer:</span> Stuart
+                <span className="font-semibold">IT Director:</span> Stuart
                 Shattock
               </li>
             </ul>
@@ -599,11 +601,11 @@ const ClubRoleDisplay = ({ language }: { language: "en" | "jp" }) => {
                 Mari, Matthew Bode and Warwick
               </li>
               <li>
-                <span className="font-semibold">Publicity Officer: </span>
+                <span className="font-semibold">Publicity Director: </span>
                 Natalie
               </li>
               <li>
-                <span className="font-semibold">Liason Officer: </span>
+                <span className="font-semibold">Liason Director: </span>
                 Krystle
               </li>
               <li>
@@ -611,7 +613,7 @@ const ClubRoleDisplay = ({ language }: { language: "en" | "jp" }) => {
                 Tim Wallis
               </li>
               <li>
-                <span className="font-semibold">IT Officer: </span>
+                <span className="font-semibold">IT Director: </span>
                 Ryuichi
               </li>
             </ul>
