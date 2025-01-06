@@ -164,7 +164,7 @@ const ClubRoleDisplay = ({ language }: { language: "en" | "jp" }) => {
   if (!hasMounted) return null;
 
   return (
-    <div className="flex flex-col w-full p-4 -mt-24">
+    <div className="flex flex-col w-full p-4 -mt-12 sm:-mt-24">
       {/* Title Header */}
       <h1 className="text-3xl font-bold text-center mb-8">
         {language === "en" ? "2025 Executive Committee" : "2025年度役員委員会"}
