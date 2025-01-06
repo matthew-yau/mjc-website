@@ -12,7 +12,7 @@ import {
 
 export default function FirstSection({ language }: { language: "en" | "jp" }) {
   const ref1 = useRef<HTMLDivElement>(null);
-  const [petals, setPetals] = useState<JSX.Element[]>([]);
+  const [petals, setPetals] = useState<React.ReactNode[]>([]);
   const isVisible1 = useIsVisible(ref1);
 
   const translations = {
