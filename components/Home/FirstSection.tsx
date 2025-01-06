@@ -21,7 +21,7 @@ export default function FirstSection({ language }: { language: "en" | "jp" }) {
       jp: "モナッシュ日本クラブへようこそ！",
     },
     paragraph2: {
-      en: "We pride ourselves on maintaining a fun, friendly environment for everyone interested in Japanese culture and building a bridge between Australia-Japan relations.",
+      en: "We pride ourselves on maintaining a fun, friendly environment for everyone interested in Japanese culture.",
       jp: "日本文化に興味のあるすべての人々にとって楽しくフレンドリーな環境を維持し、日豪関係の架け橋を築くことを誇りに思っています。",
     },
     learnMore: {
@@ -62,53 +62,56 @@ export default function FirstSection({ language }: { language: "en" | "jp" }) {
       );
     });
     setPetals(generatedPetals);
-  }, []); // Empty dependency array ensures this runs only once on the client
+  }, []);
 
   return (
     <div
       ref={ref1}
       className={`transition-opacity duration-700 overflow-hidden ${
         isVisible1 ? "opacity-100" : "opacity-0"
-      } relative h-[calc(100vh-88px)] bg-[#FAFAFA] px-4 sm:px-8`}
+      } relative h-[calc(100vh-88px)] bg-[#eceae8] px-4 sm:px-8`}
     >
       {/* Sakura Branch Images */}
-      <div className="absolute top-0 left-0 z-30 sm:block hidden">
+      <div className="absolute top-[-70px] -left-10 z-30 sm:block hidden">
         <img
-          src="/images/sakuraleft.png"
+          src="/images/sakuraleft2.png"
           alt="Sakura Branch Left"
           className="w-[300px] sm:w-[400px] animate-sakuraLeft"
         />
       </div>
-      <div className="absolute top-0 right-0 z-30">
+
+      <div className="absolute top-0 right-0 z-0 sm:block hidden">
         <img
-          src="/images/sakuraright.png"
+          src="/images/sakuraright2.png"
           alt="Sakura Branch Right"
-          className="w-[300px] sm:w-[400px] animate-sakuraRight"
+          className="w-[300px] sm:w-[400px] animate-sakuraRight sm:opacity-100"
         />
       </div>
 
       {/* Petals */}
       <div className="falling-petals">{petals}</div>
 
-      {/* Torii Image for Desktop */}
+      {/* Pagoda Image for Desktop */}
       <div
-        className="absolute w-[1000px] h-[1000px] top-[calc(100%-300px)] sm:top-[calc(100%-630px)] right-10 sm:right-20 
+        className="absolute w-[1000px] h-[1000px] top-[calc(100%-300px)] sm:top-[calc(100%-400px)] right-10 sm:right-24 
              md:block hidden"
       >
         <img
-          src="/images/tori.png"
+          src="/images/divider5.png"
           alt="Torii Gate"
           className="w-full max-w-[300px] sm:max-w-[600px] md:max-w-[800px] lg:max-w-[1000px]"
+          style={{ opacity: 0.75 }}
         />
       </div>
-      {/* Torii Image for Mobile */}
-      <div className="absolute w-[500px] h-[500px] -bottom-20 top-1/2 left-1/2 transform -translate-x-1/3 translate-y-6 block md:hidden">
+      {/* Pagoda Image for Mobile */}
+      <div className="absolute w-[500px] h-[500px] top-40 left-1/3 transform -translate-x-1/2 translate-y-48 block md:hidden">
         <img
-          src="/images/tori.png"
+          src="/images/divider5.png"
           alt="Torii Gate"
           className="w-full h-full object-contain"
         />
       </div>
+
       {/* Centered Content */}
       <div className="container mx-auto px-4 sm:px-8 py-8 sm:py-16">
         {/* Two-Column Layout */}
@@ -143,7 +146,7 @@ export default function FirstSection({ language }: { language: "en" | "jp" }) {
               {/* Grey Divider Line */}
               <div className="w-full h-px bg-gray-300 my-6"></div>
 
-              <div className="flex items-center justify-end space-x-4 sm:mr-8 mr-4">
+              <div className="flex items-center justify-end space-x-4 sm:mr-8 mr-4 z-40">
                 {/* Social Links */}
                 <div className="flex space-x-4">
                   <a
@@ -204,36 +207,26 @@ export default function FirstSection({ language }: { language: "en" | "jp" }) {
           </div>
 
           {/* Right Column */}
-          <div className="hidden sm:flex flex-col items-center sm:items-start justify-center relative">
-            <div className="relative w-full h-auto z-10">
-              {/* First Image */}
-              <div className="absolute top-12 sm:top-8 left-6 sm:left-12 transform -translate-x-3 sm:-translate-x-6 -translate-y-10 sm:-translate-y-20 rotate-6">
-                <img
-                  src="/images/wind.jpg"
-                  alt="Japan Scene"
-                  className="photo"
-                />
-              </div>
-              {/* Second Image */}
-              <div className="absolute top-20 sm:top-20 left-12 sm:left-24 transform -translate-x-5 sm:-translate-x-10 -translate-y-6 sm:-translate-y-12 -rotate-6 w-[350px]">
-                <img
-                  src="/images/yakuza.png"
-                  alt="Subway Scene"
-                  className="photo"
-                />
-              </div>
+          <div className="relative flex flex-col items-center justify-center sm:flex-row sm:justify-start sm:space-x-8 top-16">
+            <div className="relative w-full max-w-4xl mx-auto hidden sm:block">
+              {/* Polaroid Image */}
+              <img
+                src="/images/frontpage.png"
+                alt="Monash Japanese Club Activities"
+                className="transform transition-transform duration-500 hover:scale-105"
+              />
             </div>
           </div>
         </section>
       </div>
       {/* Divider */}
-      <div className="custom-shape-divider-bottom-1736080053">
+      <div className="custom-shape-divider-bottom-1736080053 z-20">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1000 120"
+          viewBox="0 0 1000 160"
           preserveAspectRatio="none"
-          className="w-full h-32 sm:h-48"
+          className="w-full h-32 sm:h-48 z-20"
         >
           <path
             d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
