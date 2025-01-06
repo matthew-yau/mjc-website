@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import useIsVisible from "@/hooks/useIsVisible";
 import { MdOutlineEmail } from "react-icons/md";
 import {
@@ -12,6 +12,7 @@ import {
 
 export default function FirstSection({ language }: { language: "en" | "jp" }) {
   const ref1 = useRef<HTMLDivElement>(null);
+  const [petals, setPetals] = useState<JSX.Element[]>([]);
   const isVisible1 = useIsVisible(ref1);
 
   const translations = {
@@ -29,6 +30,40 @@ export default function FirstSection({ language }: { language: "en" | "jp" }) {
     },
   };
 
+  // Generate petals on the client side
+  useEffect(() => {
+    const generatedPetals = [...Array(50)].map((_, index) => {
+      const randomPetal = `/images/petal${
+        Math.floor(Math.random() * 13) + 1
+      }.png`;
+      const size = Math.random() * 20 + 10; // Random size between 10px and 30px
+      const leftPosition = Math.random() * 100; // Random position across the screen width
+      const duration = Math.random() * 5 + 5; // Random fall duration between 5s and 10s
+      const delay = Math.random() * 5; // Random animation delay
+
+      return (
+        <div
+          key={index}
+          className="petal"
+          style={{
+            backgroundImage: `url(${randomPetal})`,
+            left: `${leftPosition}vw`,
+            width: `${size}px`,
+            height: `${size}px`,
+            animationName: "fall",
+            animationDuration: `${duration}s`,
+            animationDelay: `${-delay}s`,
+            animationTimingFunction: "linear",
+            zIndex: 1,
+            position: "absolute",
+            willChange: "transform",
+          }}
+        ></div>
+      );
+    });
+    setPetals(generatedPetals);
+  }, []); // Empty dependency array ensures this runs only once on the client
+
   return (
     <div
       ref={ref1}
@@ -36,6 +71,25 @@ export default function FirstSection({ language }: { language: "en" | "jp" }) {
         isVisible1 ? "opacity-100" : "opacity-0"
       } relative h-[calc(100vh-88px)] bg-[#FAFAFA] px-4 sm:px-8`}
     >
+      {/* Sakura Branch Images */}
+      <div className="absolute top-0 left-0 z-30 sm:block hidden">
+        <img
+          src="/images/sakuraleft.png"
+          alt="Sakura Branch Left"
+          className="w-[300px] sm:w-[400px] animate-sakuraLeft"
+        />
+      </div>
+      <div className="absolute top-0 right-0 z-30">
+        <img
+          src="/images/sakuraright.png"
+          alt="Sakura Branch Right"
+          className="w-[300px] sm:w-[400px] animate-sakuraRight"
+        />
+      </div>
+
+      {/* Petals */}
+      <div className="falling-petals">{petals}</div>
+
       {/* Torii Image for Desktop */}
       <div
         className="absolute w-[1000px] h-[1000px] top-[calc(100%-300px)] sm:top-[calc(100%-630px)] right-10 sm:right-20 
