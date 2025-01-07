@@ -65,7 +65,7 @@ const Enquiry: React.FC = () => {
           <EnquiryForm language={language} />
         </div>
       </main>
-      <Footer />
+      <Footer language={language} />
     </div>
   );
 };
