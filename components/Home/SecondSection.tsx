@@ -96,7 +96,7 @@ export default function SecondSection({ language }: { language: "en" | "jp" }) {
                     icon="/images/kaiwa.png"
                     title={{
                       en: "🗣️ Weekly Kaiwa",
-                      jp: "🗣️ 週刊会話",
+                      jp: "🗣️ 毎週開催の会話",
                     }}
                     description={{
                       en: "Engage in fun and interactive Japanese conversations, designed to help you practice and improve your language skills in a casual, friendly environment.",

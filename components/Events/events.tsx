@@ -11,7 +11,7 @@ const events = [
     date: "Week 0",
     description: {
       en: "Join us for an exciting start to the year during Orientation Week! Discover Japanese culture, meet new friends, and enjoy fun activities and delicious snacks.",
-      jp: "オリエンテーション週間でエキサイティングな1年の始まりを迎えましょう！日本文化を発見し、新しい友達と出会い、楽しいアクティビティや美味しい軽食を楽しみましょう。",
+      jp: "オリエンテーション週間で、会員としてエキサイティングな1年の始まりを迎え、日本文化を発見し、新しい友達と出会い、楽しいアクティビティや美味しい軽食を楽しめます。",
     },
     imageUrl: "/images/meirl.png",
   },
@@ -23,7 +23,7 @@ const events = [
     date: "Week 2",
     description: {
       en: "Indulge in a delightful evening filled with freshly made Yakisoba and experience the flavors of Japan with fellow club members.",
-      jp: "出来立ての焼きそばを楽しみながら、クラブの仲間たちと一緒に日本の味を体験しましょう。",
+      jp: "会員として、出来立ての焼きそばを楽しみながら、クラブの仲間たちと一緒に日本の味を体験できます。",
     },
     imageUrl: "/images/place-holder.png",
   },
@@ -35,7 +35,7 @@ const events = [
     date: "Week 4",
     description: {
       en: "Learn the basics of Kendo, the traditional Japanese martial art. Watch live demonstrations and even try it out yourself!",
-      jp: "日本の伝統的な武道である剣道の基本を学びましょう。実演を見学し、自分でも体験してみましょう！",
+      jp: "会員は、日本の伝統的な武道である剣道の基本を学び、実演を見学したり、自分でも体験したりできます。",
     },
     imageUrl: "/images/place-holder.png",
   },
@@ -47,7 +47,7 @@ const events = [
     date: "Week 6",
     description: {
       en: "Enjoy a fun-filled evening of ice skating with your friends. Take a break from studies and glide into an unforgettable experience.",
-      jp: "友達と楽しいアイススケートの夕べを過ごしましょう。勉強の合間に滑り、忘れられない体験を楽しみましょう。",
+      jp: "会員は、友達と楽しいアイススケートの夕べを過ごし、勉強の合間にリフレッシュしながら忘れられない体験を楽しめます。",
     },
     imageUrl: "/images/place-holder.png",
   },
@@ -59,7 +59,7 @@ const events = [
     date: "Week 8",
     description: {
       en: "Explore career opportunities and hear from professionals who have bridged Japanese and international industries. Perfect for networking and career advice.",
-      jp: "日本と国際的な業界をつなぐプロフェッショナルから話を聞き、キャリアの可能性を探りましょう。ネットワーキングやキャリアアドバイスに最適です。",
+      jp: "会員は、日本と国際的な業界をつなぐプロフェッショナルから話を聞き、キャリアの可能性を探り、ネットワーキングやキャリアアドバイスを受けられます。",
     },
     imageUrl: "/images/place-holder.png",
   },
@@ -71,7 +71,7 @@ const events = [
     date: "Week 10",
     description: {
       en: "Immerse yourself in the elegance of a traditional Japanese tea ceremony. Learn about its rich history and cultural significance.",
-      jp: "伝統的な日本の茶道の優雅さに浸りましょう。その豊かな歴史と文化的意義について学びましょう。",
+      jp: "会員は、伝統的な日本の茶道の優雅さに浸り、その豊かな歴史と文化的意義を学べます。",
     },
     imageUrl: "/images/place-holder.png",
   },
@@ -83,7 +83,7 @@ const events = [
     date: "Week 12",
     description: {
       en: "Join us for a productive study session to prepare for finals. Share tips, stay motivated, and enjoy light refreshments with club members.",
-      jp: "期末試験に向けた効率的な勉強会に参加しましょう。コツを共有し、モチベーションを維持しながら、クラブメンバーと軽食を楽しみましょう。",
+      jp: "会員は、期末試験に向けた効率的な勉強会に参加し、コツを共有し、モチベーションを維持しながら、クラブメンバーと軽食を楽しめます。",
     },
     imageUrl: "/images/place-holder.png",
   },

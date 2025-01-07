@@ -76,8 +76,8 @@ const BuyMembershipSection: React.FC<BuyMembershipSectionProps> = ({
               </h3>
               <p className="text-sm text-gray-600">
                 {language === "en"
-                  ? "Join a friendly and active community passionate about Japanese culture and language."
-                  : "日本文化と言語に情熱を持つ、フレンドリーで活発なコミュニティに参加しましょう。"}
+                  ? "Take advantage of exclusive member discounts generously offered by our amazing sponsors!"
+                  : "素晴らしいスポンサーから提供される会員限定の特典割引を利用できます！"}
               </p>
             </div>
             <div
@@ -111,7 +111,7 @@ const BuyMembershipSection: React.FC<BuyMembershipSectionProps> = ({
               <p className="text-sm text-gray-600">
                 {language === "en"
                   ? "Get access to language resources, study groups, and more!"
-                  : "言語リソース、勉強会などにアクセスしましょう！"}
+                  : "言語リソースや勉強会などにアクセスできます！"}
               </p>
             </div>
           </div>
