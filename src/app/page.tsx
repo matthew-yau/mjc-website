@@ -8,6 +8,8 @@ import IGWidget from "../../components/Home/IGWidget";
 import SponsorsSection from "../../components/Home/SponsorsSection";
 import InfiniteScroll from "../../components/InfiniteScroll";
 import BuyMembershipSection from "../../components/Home/BuyMembershipSection";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function Home() {
   // Manage the language state
@@ -41,6 +43,9 @@ export default function Home() {
 
   return (
     <main className="relative bg-[#f8fafc]">
+      <Analytics />
+      <SpeedInsights />
+
       {/* Header with language props */}
       <Header language={language} onToggleLanguage={toggleLanguage} />
 
