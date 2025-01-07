@@ -211,3 +211,21 @@ html {
     transform: translateX(20px);
   }
 }
+
+.custom-shape-divider-top-1736249055 {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1736249055 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 60px;
+}
+
+.custom-shape-divider-top-1736249055 .shape-fill {
+  fill: #ffffff; /* Change this color if needed */
+}

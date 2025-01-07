@@ -70,7 +70,7 @@ const roles: RoleDetails[] = [
   },
   {
     role: { en: "Secretary", jp: "書記" },
-    name: { en: "Lin Nakayama", jp: "リン・中山" },
+    name: { en: "Lin Nakayama", jp: "中山凛音" },
     degree: {
       en: "Degree: Science",
       jp: "専攻: 理学",
@@ -84,7 +84,7 @@ const roles: RoleDetails[] = [
   },
   {
     role: { en: "Marketing Director", jp: "マーケティング担当" },
-    name: { en: "Chinatsu Kanasaka", jp: "金坂千夏" },
+    name: { en: "Chinatsu Kanasaka", jp: "金坂知夏" },
     degree: {
       en: "Degrees: Secondary Education and Arts",
       jp: "専攻: 中等教育および文学",
@@ -126,7 +126,7 @@ const roles: RoleDetails[] = [
   },
   {
     role: { en: "Education Director", jp: "教育担当" },
-    name: { en: "Sara Ando", jp: "安藤サラ" },
+    name: { en: "Sara Ando", jp: "安藤紗楽" },
     degree: {
       en: "Degrees: Secondary and Primary Education (Special and Inclusive Education)",
       jp: "専攻: 中等および初等教育（特別支援教育およびインクルーシブ教育）",
@@ -251,12 +251,13 @@ const ClubRoleDisplay = ({ language }: { language: "en" | "jp" }) => {
           </div>
         </div>
       </div>
+
       {/* Past Committees Section */}
       <div className="relative mt-16">
         {/* Past Committees Section */}
         <div className="relative z-10 p-4">
           <h2 className="text-2xl font-bold text-center mb-8">
-            Past Committees
+            {language === "en" ? "Past Committees" : "過去の委員会"}
           </h2>
 
           {/* Committees Grid */}
