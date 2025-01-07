@@ -48,10 +48,14 @@ export default function Home() {
       <FirstSection language={language} />
 
       {/* Second Page - Blue Section */}
-      <SecondSection />
+      <SecondSection language={language} />
 
       <InfiniteScroll />
-      <BuyMembershipSection backgroundImage="/images/banner.png" year="2025" />
+      <BuyMembershipSection
+        language={language}
+        backgroundImage="/images/banner.png"
+        year="2025"
+      />
       <div className="bg-gray-50 py-12">
         <div className="container mx-auto text-center">
           <h1 className="text-4xl font-bold text-gray-800 mb-6">
@@ -106,7 +110,7 @@ export default function Home() {
         </div>
       )}
 
-      <Footer />
+      <Footer language={language} />
     </main>
   );
 }

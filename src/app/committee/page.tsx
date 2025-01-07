@@ -36,7 +36,7 @@ const TeamPage: React.FC = () => {
       </main>
 
       {/* Footer Component */}
-      <Footer />
+      <Footer language={language} />
     </div>
   );
 };

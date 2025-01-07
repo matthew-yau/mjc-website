@@ -6,11 +6,13 @@ import useIsVisible from "@/hooks/useIsVisible";
 interface BuyMembershipSectionProps {
   backgroundImage?: string;
   year: string;
+  language: "en" | "jp"; // Add language prop
 }
 
 const BuyMembershipSection: React.FC<BuyMembershipSectionProps> = ({
   backgroundImage = "/images/banner.png",
   year = "2025",
+  language = "en",
 }) => {
   const ref1 = useRef<HTMLDivElement>(null);
   const ref2 = useRef<HTMLDivElement>(null);
@@ -37,17 +39,28 @@ const BuyMembershipSection: React.FC<BuyMembershipSectionProps> = ({
       <div className="relative z-20 flex flex-col items-center justify-center h-full px-4 md:px-8">
         {/* Header Section */}
         <div className="bg-white shadow-lg rounded-md px-6 py-4 mt-8 md:mt-4 translate-y-4">
-          <h2 className="text-xl md:text-2xl font-bold text-center text-gray-800">
-            Become a{" "}
-            <span className="bg-gradient-to-r from-red-500 via-green-500 to-blue-500 bg-clip-text text-transparent">
-              {year} member
-            </span>{" "}
-            today!
+          <h2 className="text-xl md:text-2xl font-bold text-center text-gray-800 uppercase">
+            {language === "en" ? (
+              <>
+                Become a{" "}
+                <span className="bg-gradient-to-r from-red-500 via-green-500 to-blue-500 bg-clip-text text-transparent">
+                  {year} member
+                </span>{" "}
+                today!
+              </>
+            ) : (
+              <>
+                <span className="bg-gradient-to-r from-red-500 via-green-500 to-blue-500 bg-clip-text text-transparent">
+                  {year}年のメンバー
+                </span>{" "}
+                になろう！
+              </>
+            )}
           </h2>
         </div>
 
         {/* Membership Benefits */}
-        <div className="flex flex-col md:flex-row items-center md:items-start gap-4 w-full max-w-4xl mt-8">
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-4 w-full max-w-4xl mt-8 pb-8">
           {/* Text Boxes */}
           <div className="flex flex-col gap-3 w-full md:w-1/2">
             <div
@@ -59,11 +72,12 @@ const BuyMembershipSection: React.FC<BuyMembershipSectionProps> = ({
               }`}
             >
               <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-2">
-                🎉 Membership Discounts
+                🎉 {language === "en" ? "Membership Discounts" : "会員割引"}
               </h3>
               <p className="text-sm text-gray-600">
-                Join a friendly and active community passionate about Japanese
-                culture and language.
+                {language === "en"
+                  ? "Join a friendly and active community passionate about Japanese culture and language."
+                  : "日本文化と言語に情熱を持つ、フレンドリーで活発なコミュニティに参加しましょう。"}
               </p>
             </div>
             <div
@@ -75,10 +89,12 @@ const BuyMembershipSection: React.FC<BuyMembershipSectionProps> = ({
               }`}
             >
               <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-2">
-                🎊 Exclusive Events
+                🎊 {language === "en" ? "Exclusive Events" : "限定イベント"}
               </h3>
               <p className="text-sm text-gray-600">
-                Access exclusive events, workshops, and cultural activities.
+                {language === "en"
+                  ? "Access exclusive events, workshops, and cultural activities."
+                  : "限定イベント、ワークショップ、文化活動に参加できます。"}
               </p>
             </div>
             <div
@@ -90,10 +106,12 @@ const BuyMembershipSection: React.FC<BuyMembershipSectionProps> = ({
               }`}
             >
               <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-2">
-                🚀 Valuable Resources
+                🚀 {language === "en" ? "Valuable Resources" : "貴重なリソース"}
               </h3>
               <p className="text-sm text-gray-600">
-                Get access to language resources, study groups, and more!
+                {language === "en"
+                  ? "Get access to language resources, study groups, and more!"
+                  : "言語リソース、勉強会などにアクセスしましょう！"}
               </p>
             </div>
           </div>
@@ -116,7 +134,7 @@ const BuyMembershipSection: React.FC<BuyMembershipSectionProps> = ({
                 {/* Arrow */}
                 <img
                   src="/images/whitearrow.png"
-                  alt="Click Me Arrow"
+                  alt={language === "en" ? "Click Me Arrow" : "クリック矢印"}
                   className="absolute -top-10 -right-10 md:-top-20 md:-right-16 w-[100px] md:w-[150px] h-auto"
                 />
               </div>

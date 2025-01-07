@@ -39,7 +39,7 @@ const OverlappingCircles: React.FC = () => {
         alt="Chat Bubbles"
         className="absolute"
         style={{
-          top: "-170px",
+          top: "-120px",
           left: "75%",
           transform: "translate(-50%, -50%)",
           width: "20rem", // Adjust image size as needed

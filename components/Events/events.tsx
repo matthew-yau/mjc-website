@@ -101,15 +101,8 @@ const Events: React.FC<{ language: "en" | "jp" }> = ({ language }) => {
         {events.map((event, index) => (
           <div
             key={index}
-            className="bg-white shadow-lg rounded-lg flex flex-col md:flex-row overflow-hidden"
+            className="bg-white shadow-lg rounded-lg flex flex-col overflow-hidden"
           >
-            <div className="w-full md:w-1/3 flex-shrink-0">
-              <img
-                src={event.imageUrl}
-                alt={language === "en" ? event.title.en : event.title.jp}
-                className="w-full h-full object-cover"
-              />
-            </div>
             <div className="p-4 sm:p-6 flex flex-col justify-between flex-grow">
               <div>
                 <h2 className="text-xl sm:text-2xl font-bold text-gray-800">

@@ -23,8 +23,8 @@ const FAQ: React.FC<FAQProps> = ({ language }) => {
         jp: "クラブにはどうやって参加できますか？",
       },
       answer: {
-        en: "You can join the club by clicking the 'Join Now' button at the top-right corner of this page, which will direct you to the MSA website for registration.",
-        jp: "このページの右上にある「Join Now」ボタンをクリックし、MSAのウェブサイトで登録することで参加できます。",
+        en: "You can join the club by clicking the 'Join us' button at the top-right corner of this page, which will direct you to the MSA website for registration.",
+        jp: "このページの右上にある「Join us」ボタンをクリックし、MSAのウェブサイトで登録することで参加できます。",
       },
     },
     {

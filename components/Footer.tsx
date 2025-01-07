@@ -9,13 +9,19 @@ import {
 } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 
-const Footer = () => {
+interface FooterProps {
+  language: "en" | "jp";
+}
+
+const Footer: React.FC<FooterProps> = ({ language }) => {
   return (
     <footer className="bg-[#f8fafc] text-[#727986] py-8">
       <div className="container mx-auto px-16 flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
         {/* Left Section */}
         <div className="text-sm text-[#727986] text-center md:text-left">
-          Located at Monash University Clayton Campus
+          {language === "en"
+            ? "Located at Monash University Clayton Campus"
+            : "モナシュ大学クレイトンキャンパスに位置しています"}
         </div>
 
         {/* Middle Section: Social Icons */}
@@ -70,8 +76,16 @@ const Footer = () => {
 
         {/* Right Section: Copyright */}
         <div className="text-sm text-[#727986] text-center md:text-right">
-          © {new Date().getFullYear()} Monash Japanese Club. All Rights
-          Reserved.
+          {language === "en" ? (
+            <>
+              © {new Date().getFullYear()} Monash Japanese Club. All Rights
+              Reserved.
+            </>
+          ) : (
+            <>
+              © {new Date().getFullYear()} モナシュ日本語クラブ。全著作権所有。
+            </>
+          )}
         </div>
       </div>
     </footer>
