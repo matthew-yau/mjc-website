@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
-import useIsVisible from "@/hooks/useIsVisible";
+// import useIsVisible from "@/hooks/useIsVisible";
 import { MdOutlineEmail } from "react-icons/md";
 import {
   FaFacebookF,
@@ -13,7 +13,7 @@ import {
 export default function FirstSection({ language }: { language: "en" | "jp" }) {
   const ref1 = useRef<HTMLDivElement>(null);
   const [petals, setPetals] = useState<React.ReactNode[]>([]);
-  const isVisible1 = useIsVisible(ref1);
+  // const isVisible1 = useIsVisible(ref1);
 
   const translations = {
     heading: {
