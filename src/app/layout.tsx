@@ -38,6 +38,7 @@ export default function RootLayout({
           name="twitter:image"
           content="https://monashjapaneseclub.com/images/embed.png"
         />
+        <meta name="theme-color" content="#f6787a" />
 
         {/* Fallback Meta Tags */}
         <meta name="description" content={metadata.description} />
