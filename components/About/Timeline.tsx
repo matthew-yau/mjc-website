@@ -38,14 +38,14 @@ const events: TimelineEvent[] = [
     icon: <LibraryBooksIcon />,
   },
   {
-    year: "1992",
+    year: "1996",
     title: {
       en: "🎉 Club Founded",
       jp: "🎉 クラブ設立",
     },
     description: {
-      en: "The Monash Japanese Club was officially established in 1992 to promote cultural exchange and understanding between Japanese and non-Japanese students. Since then, the club has served as a platform for activities like language exchanges, cultural workshops, and social events celebrating both traditional and modern Japanese culture.",
-      jp: "モナシュ日本クラブは、1992年に日本人学生と非日本人学生の文化交流と理解を促進する目的で正式に設立されました。設立以来、言語交換、文化ワークショップ、日本の伝統や現代文化を祝う交流イベントなどを提供しています。",
+      en: "The Monash Japanese Club was officially established in 1996 to promote cultural exchange and understanding between Japanese and non-Japanese students. Since then, the club has served as a platform for activities like language exchanges, cultural workshops, and social events celebrating both traditional and modern Japanese culture.",
+      jp: "モナシュ日本クラブは、1996年に日本人学生と非日本人学生の文化交流と理解を促進する目的で正式に設立されました。設立以来、言語交換、文化ワークショップ、日本の伝統や現代文化を祝う交流イベントなどを提供しています。",
     },
     image: "/images/2008.jpg",
     icon: <CakeIcon />,
