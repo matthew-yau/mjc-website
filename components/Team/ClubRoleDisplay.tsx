@@ -28,7 +28,7 @@ const roles: RoleDetails[] = [
   },
   {
     role: { en: "Vice President", jp: "副会長" },
-    name: { en: "Ain Mohiddin", jp: "アイン・モヒディン" },
+    name: { en: "Ain Mohiddin", jp: "アン・モヒディン" },
     degree: {
       en: "Degrees: Laws (Honours) and Commerce",
       jp: "専攻: 法学（優等）および商学",
