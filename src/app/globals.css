@@ -8,6 +8,7 @@ html {
   padding: 0;
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
+
 .embedsocial-wrapper {
   width: 80%; /* Adjust width to make it smaller */
   max-width: 1000px; /* Set a maximum width */

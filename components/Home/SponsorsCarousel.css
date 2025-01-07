@@ -121,7 +121,7 @@
 }
 
 .glide__bullets {
-  margin-bottom: 40px; /* Increase space below the bullets */
+  margin-bottom: -40px; /* Increase space below the bullets */
 }
 
 .button-container {

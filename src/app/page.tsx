@@ -34,8 +34,8 @@ export default function Home() {
       jp: "2025年のスポンサー",
     },
     followUsOnInstagram: {
-      en: "Follow us on Instagram",
-      jp: "Instagramでフォローしてください",
+      en: "Follow us on IG!",
+      jp: "Instagramでフォローしてね！",
     },
   };
 
@@ -62,13 +62,45 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Embed IG Widget */}
+      {/* Divider with Orange Fill */}
+      <div
+        className="custom-shape-divider-top-1736228918"
+        style={{ transform: "scaleY(-1)" }}
+      >
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            fill="#833AB4" /* Solid Purple */
+          ></path>
+        </svg>
+      </div>
+
+      {/* Embed IG Widget with Vertical Gradient */}
       {process.env.NEXT_PUBLIC_IG_WIDGET_REF && (
-        <div className="py-8 bg-gradient-to-br from-orange-500 via-pink-500 to-pink-600 min-h-screen">
-          <h2 className="text-4xl font-bold text-center text-white mt-8">
+        <div
+          className="py-4 min-h-screen"
+          style={{
+            background:
+              "linear-gradient(to bottom, #833AB4, #E1306C, #FCAF45, #f8fafc)", // Orange to Purple (Vertical Gradient)
+          }}
+        >
+          <h2
+            className="text-5xl font-extrabold text-center uppercase tracking-wide mt-8"
+            style={{
+              color: "#FFFFFF", // White text fill
+              lineHeight: "1.2", // Improved line height for legibility
+              letterSpacing: "0.1em", // Slightly spaced letters for readability
+            }}
+          >
             {translations.followUsOnInstagram[language]}
           </h2>
-          <div className="mt-8">
+
+          <div className="mt-4">
             <IGWidget dataRef={process.env.NEXT_PUBLIC_IG_WIDGET_REF} />
           </div>
         </div>

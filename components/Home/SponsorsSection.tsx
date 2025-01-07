@@ -8,7 +8,7 @@ import "@glidejs/glide/dist/css/glide.theme.min.css";
 import "./SponsorsCarousel.css";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import Link from "next/link";
+// import Link from "next/link";
 
 const SponsorsCarousel: React.FC = () => {
   useEffect(() => {
@@ -113,7 +113,10 @@ const SponsorsCarousel: React.FC = () => {
           <ArrowForwardIosIcon />
         </button>
       </div>
-      <div className="glide__bullets mb-8" data-glide-el="controls[nav]">
+      <div
+        className="glide__bullets mb-8 mt-2 relative"
+        data-glide-el="controls[nav]"
+      >
         <button className="glide__bullet" data-glide-dir="=0"></button>
         <button className="glide__bullet" data-glide-dir="=1"></button>
         <button className="glide__bullet" data-glide-dir="=2"></button>
@@ -125,13 +128,13 @@ const SponsorsCarousel: React.FC = () => {
         <button className="glide__bullet" data-glide-dir="=8"></button>
       </div>
 
-      <div className="button-container mt-4 flex justify-center space-x-4">
+      {/* <div className="button-container mt-4 flex justify-center space-x-4">
         <Link href="/sponsors">
           <button className="btn btn-layered-3d btn-layered-3d--red px-3 py-1 text-sm whitespace-nowrap">
             Learn more
           </button>
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 };

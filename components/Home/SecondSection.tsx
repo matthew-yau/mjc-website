@@ -42,7 +42,7 @@ export default function SecondSection() {
   const isVisible2 = useIsVisible(ref2);
 
   return (
-    <div className="relative pt-20 md:pt-20 bg-[#BAD7FF]">
+    <div className="relative pt-20 md:pt-20 bg-[#000f46]">
       {/* Section Content with Fade-in Effect */}
       <div
         ref={ref2}
@@ -53,20 +53,21 @@ export default function SecondSection() {
         <div className="px-4 md:px-8 pb-20 md:pb-0">
           <div className="container mx-auto px-4 md:px-8 flex flex-col justify-center h-full">
             <div className="container">
-              <h2 className="text-black text-2xl md:text-4xl font-bold text-center md:text-left leading-tight max-w-lg mx-auto md:ml-64 mt-4">
+              <h2 className="text-gray-200 text-2xl md:text-4xl font-bold text-center md:text-left leading-tight max-w-lg mx-auto md:ml-64 mt-4">
                 Dive into Japanese Language and Culture with us!
               </h2>
-              <p className="text-black text-base md:text-lg leading-relaxed text-center md:text-left max-w-2xl mx-auto md:ml-64 mt-4">
+              <p className="text-gray-300 text-base md:text-lg leading-relaxed text-center md:text-left max-w-2xl mx-auto md:ml-64 mt-4">
                 Make new friendships and immerse yourself in Japanese language
                 and culture at our weekly, fortnightly, and annual events!
               </p>
+
               {/* Overlapping Circles */}
               <div className="hidden md:block">
                 <OverlappingCircles />
               </div>
 
               {/* Centered Activity Boxes */}
-              <div className="flex justify-center items-center w-full mt-10 md:mt-20">
+              <div className="flex justify-center items-center w-full mt-10 md:mt-20 mb-16 md:mb-24">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                   <ActivityBox
                     icon="/images/kaiwa.png"
