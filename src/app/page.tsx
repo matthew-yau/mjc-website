@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Head from "next/head";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import FirstSection from "../../components/Home/FirstSection";
@@ -42,24 +41,6 @@ export default function Home() {
 
   return (
     <main className="relative bg-[#f8fafc]">
-      {/* Add Open Graph meta tags dynamically */}
-      <Head>
-        <title>Monash Japanese Club</title>
-        <meta property="og:title" content="Monash Japanese Club" />
-        <meta
-          property="og:description"
-          content="Join Monash Japanese Club to explore Japanese culture, language, and events!"
-        />
-        <meta
-          property="og:image"
-          content="https://monashjapaneseclub.com/images/embed.png"
-        />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://monashjapaneseclub.com/" />
-      </Head>
-
       {/* Header with language props */}
       <Header language={language} onToggleLanguage={toggleLanguage} />
 
