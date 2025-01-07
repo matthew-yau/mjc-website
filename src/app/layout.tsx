@@ -14,6 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <title>{metadata.title}</title> {/* Add this line */}
         <link
           href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
           rel="stylesheet"
@@ -29,7 +30,6 @@ export default function RootLayout({
         <meta property="og:image:height" content="630" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://monashjapaneseclub.com/" />
-
         {/* Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={metadata.title} />
@@ -39,7 +39,6 @@ export default function RootLayout({
           content="https://monashjapaneseclub.com/images/embed.png"
         />
         <meta name="theme-color" content="#f6787a" />
-
         {/* Fallback Meta Tags */}
         <meta name="description" content={metadata.description} />
       </head>
