@@ -5,7 +5,7 @@ import { FaLinkedin } from "react-icons/fa"; // Import LinkedIn icon from react-
 type RoleDetails = {
   role: { en: string; jp: string };
   name: { en: string; jp: string };
-  degree: { en: string; jp: string };
+  degree: { en: string; jp: string; studyAbroad?: { en: string; jp: string } };
   imageUrl: string;
   description: { en: string; jp: string };
   linkedin?: string;
@@ -58,8 +58,12 @@ const roles: RoleDetails[] = [
     role: { en: "Assistant Treasurer", jp: "会計補佐" },
     name: { en: "Max Ramsay", jp: "マックス・ラムゼイ" },
     degree: {
-      en: "Degrees: Commerce and Arts",
-      jp: "専攻: 商学と文学",
+      en: "Degrees: Commerce and Diploma of Languages (Japanese)",
+      jp: "専攻: 商学と言語学ディプロマ（日本語）",
+      studyAbroad: {
+        en: "Exchange Semester: Hitotsubashi University",
+        jp: "留学先: 一橋大学",
+      },
     },
     imageUrl: "/images/place-holder.png",
     description: {
@@ -130,6 +134,10 @@ const roles: RoleDetails[] = [
     degree: {
       en: "Degrees: Secondary and Primary Education (Special and Inclusive Education)",
       jp: "専攻: 中等と初等教育（特別支援教育とインクルーシブ教育）",
+      studyAbroad: {
+        en: "Exchange Semester: Hitotsubashi University",
+        jp: "留学先: 東京大学",
+      },
     },
     imageUrl: "/images/place-holder.png",
     description: {
@@ -143,6 +151,10 @@ const roles: RoleDetails[] = [
     degree: {
       en: "Degrees: Commerce, Computer Science, and Diploma of Languages (Japanese)",
       jp: "専攻: 商学、コンピュータ科学、言語学ディプロマ（日本語）",
+      studyAbroad: {
+        en: "Exchange Semester: The University of Tokyo",
+        jp: "留学先: 東京大学",
+      },
     },
     imageUrl: "/images/place-holder.png",
     description: {
@@ -243,6 +255,14 @@ const ClubRoleDisplay = ({ language }: { language: "en" | "jp" }) => {
                 ? selectedRole.degree.en
                 : selectedRole.degree.jp}
             </p>
+            {selectedRole.degree.studyAbroad && (
+              <p className="text-sm text-gray-700 font-bold mt-1">
+                {language === "en"
+                  ? selectedRole.degree.studyAbroad.en
+                  : selectedRole.degree.studyAbroad.jp}
+              </p>
+            )}
+
             <p className="mt-4 text-gray-600">
               {language === "en"
                 ? selectedRole.description.en

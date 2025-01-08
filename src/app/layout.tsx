@@ -14,7 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>{metadata.title}</title> {/* Add this line */}
+        <title>{metadata.title}</title>
         <link
           href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
           rel="stylesheet"
