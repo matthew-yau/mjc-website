@@ -12,12 +12,12 @@ export default function InfiniteScroll() {
             <React.Fragment key={index}>
               {/* Japanese Text */}
               <div className="text-[#1f1f1f] text-2xl font-semibold">
-                モナシュ日本クラブ
+                モナッシュ日本クラブ
               </div>
 
               {/* First Logo */}
               <img
-                src="/images/noback.png" // Replace with your actual logo path
+                src="/images/noback.png"
                 alt="MJC Logo"
                 className="w-16 h-16 object-contain"
               />

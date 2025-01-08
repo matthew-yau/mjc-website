@@ -31,7 +31,7 @@ const roles: RoleDetails[] = [
     name: { en: "Ain Mohiddin", jp: "アン・モヒディン" },
     degree: {
       en: "Degrees: Laws (Honours) and Commerce",
-      jp: "専攻: 法学（優等）および商学",
+      jp: "専攻: 法学（優等）と商学",
     },
     imageUrl: "/images/place-holder.png",
     description: {
@@ -45,7 +45,7 @@ const roles: RoleDetails[] = [
     name: { en: "Yanling Chen", jp: "ヤンリン・チェン" },
     degree: {
       en: "Degrees: Commerce and Biomedical Science",
-      jp: "専攻: 商学および生物医学科学",
+      jp: "専攻: 商学と生物医学科学",
     },
     imageUrl: "/images/place-holder.png",
     description: {
@@ -56,17 +56,17 @@ const roles: RoleDetails[] = [
   },
   {
     role: { en: "Assistant Treasurer", jp: "会計補佐" },
-    name: { en: "Ethan Wong", jp: "イーサン・ウォン" },
+    name: { en: "Max Ramsay", jp: "マックス・ラムゼイ" },
     degree: {
-      en: "Degree: Accounting",
-      jp: "専攻: 会計",
+      en: "Degrees: Commerce and Arts",
+      jp: "専攻: 商学と文学",
     },
     imageUrl: "/images/place-holder.png",
     description: {
       en: "Assists the treasurer with financial tasks and ensures records are accurate.",
       jp: "会計担当を補佐し、財務タスクをサポートし、記録の正確性を確保します。",
     },
-    linkedin: "https://www.linkedin.com/in/ethan-wong",
+    linkedin: "https://www.linkedin.com/in/max-ramsay-19568523a/",
   },
   {
     role: { en: "Secretary", jp: "書記" },
@@ -87,7 +87,7 @@ const roles: RoleDetails[] = [
     name: { en: "Chinatsu Kanasaka", jp: "金坂知夏" },
     degree: {
       en: "Degrees: Secondary Education and Arts",
-      jp: "専攻: 中等教育および文学",
+      jp: "専攻: 中等教育と文学",
     },
     imageUrl: "/images/place-holder.png",
     description: {
@@ -98,10 +98,10 @@ const roles: RoleDetails[] = [
   },
   {
     role: { en: "Events Director", jp: "イベント担当" },
-    name: { en: "Teruki Yamashita", jp: "山下輝" },
+    name: { en: "Teruki Yamashita", jp: "山下照生" },
     degree: {
       en: "Degrees: Radiography and Medical Imaging",
-      jp: "専攻: 放射線撮影および医療画像学",
+      jp: "専攻: 放射線撮影と医療画像学",
     },
     imageUrl: "/images/place-holder.png",
     description: {
@@ -112,10 +112,10 @@ const roles: RoleDetails[] = [
   },
   {
     role: { en: "Sponsorship Director", jp: "スポンサーシップ担当" },
-    name: { en: "Konon Kuboi", jp: "窪井湖音" },
+    name: { en: "Konon Kuboi", jp: "久保井このん" },
     degree: {
       en: "Degrees: Arts and Global Studies",
-      jp: "専攻: 文学および国際学",
+      jp: "専攻: 文学と国際学",
     },
     imageUrl: "/images/place-holder.png",
     description: {
@@ -129,12 +129,12 @@ const roles: RoleDetails[] = [
     name: { en: "Sara Ando", jp: "安藤紗楽" },
     degree: {
       en: "Degrees: Secondary and Primary Education (Special and Inclusive Education)",
-      jp: "専攻: 中等および初等教育（特別支援教育およびインクルーシブ教育）",
+      jp: "専攻: 中等と初等教育（特別支援教育とインクルーシブ教育）",
     },
     imageUrl: "/images/place-holder.png",
     description: {
       en: "Organizes workshops, training, and educational resources for members.",
-      jp: "メンバー向けにワークショップ、トレーニング、および教育リソースを企画します。",
+      jp: "メンバー向けにワークショップ、トレーニング、と教育リソースを企画します。",
     },
   },
   {
