@@ -150,7 +150,7 @@ const roles: RoleDetails[] = [
     name: { en: "Matthew Yau", jp: "マシュー・ヤウ" },
     degree: {
       en: "Degrees: Commerce, Computer Science, and Diploma of Languages (Japanese)",
-      jp: "専攻: 商学、コンピュータ科学、言語学ディプロマ（日本語）",
+      jp: "専攻: 商学、コンピュータサイエンス、言語学ディプロマ（日本語）",
       studyAbroad: {
         en: "Exchange Semester: The University of Tokyo",
         jp: "留学先: 東京大学",

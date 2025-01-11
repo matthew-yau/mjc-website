@@ -1,6 +1,5 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
-// import useIsVisible from "@/hooks/useIsVisible";
 import { MdOutlineEmail } from "react-icons/md";
 import {
   FaFacebookF,
@@ -9,11 +8,11 @@ import {
   FaDiscord,
   FaGithub,
 } from "react-icons/fa";
+import Image from "next/image";
 
 export default function FirstSection({ language }: { language: "en" | "jp" }) {
   const ref1 = useRef<HTMLDivElement>(null);
   const [petals, setPetals] = useState<React.ReactNode[]>([]);
-  // const isVisible1 = useIsVisible(ref1);
 
   const translations = {
     heading: {
@@ -71,18 +70,23 @@ export default function FirstSection({ language }: { language: "en" | "jp" }) {
     >
       {/* Sakura Branch Images */}
       <div className="absolute top-[-70px] -left-10 z-30 sm:block hidden">
-        <img
+        <Image
           src="/images/sakuraleft2.png"
           alt="Sakura Branch Left"
-          className="w-[300px] sm:w-[400px] animate-sakuraLeft"
+          width={400}
+          height={300}
+          className="animate-sakuraLeft"
+          priority
         />
       </div>
-
       <div className="absolute top-0 right-0 z-0 sm:block hidden">
-        <img
+        <Image
           src="/images/sakuraright2.png"
           alt="Sakura Branch Right"
-          className="w-[300px] sm:w-[400px] animate-sakuraRight sm:opacity-100"
+          width={400}
+          height={300}
+          className="animate-sakuraRight sm:opacity-100"
+          priority
         />
       </div>
 
@@ -90,33 +94,32 @@ export default function FirstSection({ language }: { language: "en" | "jp" }) {
       <div className="falling-petals">{petals}</div>
 
       {/* Pagoda Image for Desktop */}
-      <div
-        className="absolute w-[1000px] h-[1000px] top-[calc(100%-300px)] sm:top-[calc(100%-400px)] right-10 sm:right-24 
-             md:block hidden"
-      >
-        <img
+      <div className="absolute w-[1000px] h-[1000px] top-[calc(100%-300px)] sm:top-[calc(100%-400px)] right-10 sm:right-24 md:block hidden">
+        <Image
           src="/images/divider5.png"
           alt="Torii Gate"
-          className="w-full max-w-[300px] sm:max-w-[600px] md:max-w-[800px] lg:max-w-[1000px]"
+          width={1000}
+          height={1000}
           style={{ opacity: 0.75 }}
+          priority
         />
       </div>
       {/* Pagoda Image for Mobile */}
       <div className="absolute w-[500px] h-[500px] top-40 left-1/3 transform -translate-x-1/2 translate-y-48 block md:hidden">
-        <img
+        <Image
           src="/images/divider5.png"
           alt="Torii Gate"
-          className="w-full h-full object-contain"
+          width={500}
+          height={500}
+          layout="intrinsic"
+          className="object-contain"
         />
       </div>
 
       {/* Centered Content */}
       <div className="container mx-auto px-4 sm:px-8 py-8 sm:py-16">
-        {/* Two-Column Layout */}
         <section className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-          {/* Left Column */}
           <div className="relative flex flex-col justify-center sm:ml-64">
-            {/* Japanese Text */}
             <div className="ml-8 sm:ml-6 overflow-visible w-full sm:w-[600px] z-20">
               <h2 className="text-[#1f1f1f] font-mplus font-semibold tracking-wide text-2xl sm:text-4xl leading-tight z-20 sm:ml-32 animate-slideUpFade">
                 {language === "jp"
@@ -128,10 +131,6 @@ export default function FirstSection({ language }: { language: "en" | "jp" }) {
               {language === "jp" ? "ようこそ" : "ようこそ"}
             </h1>
 
-            {/* Overlapping Circles */}
-            <div className="absolute top-0 left-0 translate-x-2 -translate-y-2 w-16 h-16 bg-[#75C9FE] rounded-full z-0 sm:left-0 sm:-translate-x-56 sm:-translate-y-10 sm:w-36 sm:h-36 z-10"></div>
-            <div className="absolute top-4 -left-12 translate-x-2 translate-y-2 w-24 h-24 bg-[#f6787a] rounded-full z-0 sm:left-0 sm:-translate-x-36 sm:-translate-y-2 sm:w-44 sm:h-44"></div>
-
             {/* Welcome Text */}
             <div className="w-full max-w-full sm:max-w-screen-lg text-[#727986] text-base sm:text-lg leading-relaxed mt-6 mx-auto">
               <h3 className="text-black font-bold text-2xl sm:text-3xl mb-2 sm:mb-4">
@@ -141,11 +140,9 @@ export default function FirstSection({ language }: { language: "en" | "jp" }) {
                 {translations.paragraph2[language]}
               </p>
 
-              {/* Grey Divider Line */}
               <div className="w-full h-px bg-gray-300 my-6"></div>
 
               <div className="flex items-center justify-end space-x-4 sm:mr-8 mr-4 z-40">
-                {/* Social Links */}
                 <div className="flex space-x-4">
                   <a
                     href="mailto:japanese@monashclubs.org"
@@ -194,12 +191,6 @@ export default function FirstSection({ language }: { language: "en" | "jp" }) {
                     <FaGithub className="h-5 w-5" />
                   </a>
                 </div>
-                {/* Learn More Button
-                <Link href="/about">
-                  <button className="btn btn-layered-3d btn-layered-3d--red px-4 py-2 text-sm whitespace-nowrap">
-                    {translations.learnMore[language]}
-                  </button>
-                </Link> */}
               </div>
             </div>
           </div>
@@ -207,10 +198,12 @@ export default function FirstSection({ language }: { language: "en" | "jp" }) {
           {/* Right Column */}
           <div className="relative flex flex-col items-center justify-center sm:flex-row sm:justify-start sm:space-x-8 top-16">
             <div className="relative w-full max-w-4xl mx-auto hidden sm:block">
-              {/* Polaroid Image */}
-              <img
+              <Image
                 src="/images/frontpage.png"
                 alt="Monash Japanese Club Activities"
+                width={800}
+                height={600}
+                layout="responsive"
                 className="transform transition-transform duration-500 hover:scale-105"
               />
             </div>
