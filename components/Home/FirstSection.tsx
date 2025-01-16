@@ -21,7 +21,7 @@ export default function FirstSection({ language }: { language: "en" | "jp" }) {
     },
     paragraph2: {
       en: "We pride ourselves on maintaining a fun, friendly environment for everyone interested in Japanese culture.",
-      jp: "日本文化に興味のあるすべての人々にとって楽しくフレンドリーな環境を維持し、日豪関係の架け橋を築くことを誇りに思っています。",
+      jp: "日本文化に興味があるすべての方が楽しめる、フレンドリーな環境を提供しています。",
     },
     learnMore: {
       en: "Learn more",

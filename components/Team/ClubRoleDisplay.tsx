@@ -134,10 +134,6 @@ const roles: RoleDetails[] = [
     degree: {
       en: "Degrees: Secondary and Primary Education (Special and Inclusive Education)",
       jp: "専攻: 中等と初等教育（特別支援教育とインクルーシブ教育）",
-      studyAbroad: {
-        en: "Exchange Semester: Hitotsubashi University",
-        jp: "留学先: 東京大学",
-      },
     },
     imageUrl: "/images/place-holder.png",
     description: {

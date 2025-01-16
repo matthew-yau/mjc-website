@@ -21,7 +21,7 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
         <div className="text-sm text-[#727986] text-center md:text-left">
           {language === "en"
             ? "Located at Monash University Clayton Campus"
-            : "モナシュ大学クレイトンキャンパスに位置しています"}
+            : "モナッシュ大学クレイトンキャンパスに位置しています"}
         </div>
 
         {/* Middle Section: Social Icons */}
@@ -83,7 +83,7 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
             </>
           ) : (
             <>
-              © {new Date().getFullYear()} モナシュ日本語クラブ。全著作権所有。
+              © {new Date().getFullYear()} モナッシュ日本クラブ。全著作権所有。
             </>
           )}
         </div>
