@@ -57,7 +57,7 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
             <FaLinkedin className="h-5 w-5" />
           </a>
           <a
-            href="https://discord.gg/7t6jyMgz3c"
+            href="https://discord.gg/Ge7MjeZJdT"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-red-500 transition-colors"
@@ -83,7 +83,8 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
             </>
           ) : (
             <>
-              © {new Date().getFullYear()} モナッシュ日本クラブ。全著作権所有。
+              © {new Date().getFullYear()}{" "}
+              モナッシュ日本語クラブ。全著作権所有。
             </>
           )}
         </div>
