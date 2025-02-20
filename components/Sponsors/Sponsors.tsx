@@ -39,7 +39,7 @@ const sponsors = [
   },
   {
     image: "/images/sponsors/koori.png",
-    name: "Koori",
+    name: "Kori",
     link: "https://www.kori-icecream.com.au/",
     caption: "2 for 1 vouchers",
   },

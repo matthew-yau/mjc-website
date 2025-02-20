@@ -129,7 +129,7 @@ const SponsorsCarousel: React.FC = () => {
             >
               <div className="slide-content">
                 <img src="/images/sponsors/koori.png" alt="Sponsor 7" />
-                <p className="slide-caption font-roboto">Koori</p>
+                <p className="slide-caption font-roboto">K&#333;ri</p>
               </div>
             </a>
           </li>
