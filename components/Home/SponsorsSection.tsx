@@ -38,61 +38,124 @@ const SponsorsCarousel: React.FC = () => {
       <div className="glide__track" data-glide-el="track">
         <ul className="glide__slides">
           <li className="glide__slide">
-            <div className="slide-content">
-              <img src="/images/sponsors/chaju.png" alt="Sponsor 1" />
-              <p className="slide-caption font-roboto">Chaju</p>
-            </div>
+            <a
+              href="https://sulbingcafe.com.au/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="slide-content">
+                <img src="/images/sponsors/sulbing.png" alt="Sponsor 1" />
+                <p className="slide-caption font-roboto">Sulbing</p>
+              </div>
+            </a>
           </li>
           <li className="glide__slide">
-            <div className="slide-content">
-              <img src="/images/sponsors/hakubaku.png" alt="Sponsor 2" />
-              <p className="slide-caption font-roboto">Hakubaku</p>
-            </div>
+            <a
+              href="https://japaneasy.com.au/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="slide-content">
+                <img src="/images/sponsors/japaneasy.png" alt="Sponsor 1" />
+                <p className="slide-caption font-roboto">Japaneasy</p>
+              </div>
+            </a>
           </li>
           <li className="glide__slide">
-            <div className="slide-content">
-              <img src="/images/sponsors/yoosh.png" alt="Sponsor 3" />
-              <p className="slide-caption font-roboto">Yoosh</p>
-            </div>
+            <a
+              href="https://chahaus.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="slide-content">
+                <img src="/images/sponsors/chahaus.png" alt="Sponsor 2" />
+                <p className="slide-caption font-roboto">Cha Haus</p>
+              </div>
+            </a>
           </li>
           <li className="glide__slide">
-            <div className="slide-content">
-              <img src="/images/sponsors/savour.png" alt="Sponsor 4" />
-              <p className="slide-caption font-roboto">Savour</p>
-            </div>
+            <a
+              href="https://anotherdatenight.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="slide-content">
+                <img src="/images/sponsors/freedatenight.png" alt="Sponsor 3" />
+                <p className="slide-caption font-roboto">Another Date Night</p>
+              </div>
+            </a>
           </li>
           <li className="glide__slide">
-            <div className="slide-content">
-              <img
-                src="/images/sponsors/orientalmerchant.png"
-                alt="Sponsor 5"
-              />
-              <p className="slide-caption font-roboto">Oriental Merchant</p>
-            </div>
+            <a
+              href="https://kbox.com.au/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="slide-content">
+                <img src="/images/sponsors/kbox.png" alt="Sponsor 4" />
+                <p className="slide-caption font-roboto">KBox Karaoke</p>
+              </div>
+            </a>
           </li>
           <li className="glide__slide">
-            <div className="slide-content">
-              <img src="/images/sponsors/obento.png" alt="Sponsor 6" />
-              <p className="slide-caption font-roboto">Obento</p>
-            </div>
+            <a
+              href="https://hareruya.com.au/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="slide-content">
+                <img src="/images/sponsors/hareruya.png" alt="Sponsor 5" />
+                <p className="slide-caption font-roboto">Hareruya Pantry</p>
+              </div>
+            </a>
           </li>
           <li className="glide__slide">
-            <div className="slide-content">
-              <img src="/images/sponsors/koori.png" alt="Sponsor 7" />
-              <p className="slide-caption font-roboto">Koori</p>
-            </div>
+            <a
+              href="https://mij.com.au/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="slide-content">
+                <img src="/images/sponsors/madeinjapan.png" alt="Sponsor 6" />
+                <p className="slide-caption font-roboto">Made in Japan</p>
+              </div>
+            </a>
           </li>
           <li className="glide__slide">
-            <div className="slide-content">
-              <img src="/images/sponsors/kewpie.png" alt="Sponsor 8" />
-              <p className="slide-caption font-roboto">Kewpie</p>
-            </div>
+            <a
+              href="https://www.kori-icecream.com.au/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="slide-content">
+                <img src="/images/sponsors/koori.png" alt="Sponsor 7" />
+                <p className="slide-caption font-roboto">Koori</p>
+              </div>
+            </a>
           </li>
           <li className="glide__slide">
-            <div className="slide-content">
-              <img src="/images/sponsors/julies.png" alt="Sponsor 9" />
-              <p className="slide-caption font-roboto">Julie&apos;s</p>
-            </div>
+            <a
+              href="https://itoen.com.au/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="slide-content">
+                <img src="/images/sponsors/itoen.png" alt="Sponsor 8" />
+                <p className="slide-caption font-roboto">Ito En</p>
+              </div>
+            </a>
+          </li>
+          <li className="glide__slide">
+            <a
+              href="https://ediblecutlery.au/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="slide-content">
+                <img src="/images/sponsors/ediblecutlery.png" alt="Sponsor 9" />
+                <p className="slide-caption font-roboto">Edible Cutlery</p>
+              </div>
+            </a>
           </li>
         </ul>
       </div>
@@ -127,14 +190,6 @@ const SponsorsCarousel: React.FC = () => {
         <button className="glide__bullet" data-glide-dir="=7"></button>
         <button className="glide__bullet" data-glide-dir="=8"></button>
       </div>
-
-      {/* <div className="button-container mt-4 flex justify-center space-x-4">
-        <Link href="/sponsors">
-          <button className="btn btn-layered-3d btn-layered-3d--red px-3 py-1 text-sm whitespace-nowrap">
-            Learn more
-          </button>
-        </Link>
-      </div> */}
     </div>
   );
 };

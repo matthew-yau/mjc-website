@@ -45,10 +45,18 @@
   overflow: hidden;
 }
 
+/* Smooth corners and pop effect for images inside slides */
 .glide__slide img {
   max-width: 100%; /* Ensure images fit within the slide */
   max-height: 100%;
   object-fit: cover; /* Crop the image to fit the slide dimensions */
+  border-radius: 12px; /* Smooth corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for pop effect */
+}
+
+.glide__slide img:hover {
+  transform: translateY(-5px); /* Pop upwards on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
 }
 
 /* Move navigation arrows higher */
@@ -121,7 +129,12 @@
 }
 
 .glide__bullets {
-  margin-bottom: -40px; /* Increase space below the bullets */
+  display: flex;
+  justify-content: center; /* Center the bullets horizontally */
+  align-items: center; /* Ensure they are vertically centered */
+  margin-bottom: 0; /* Reset any existing margin */
+  position: relative; /* Allows adjusting position */
+  top: 20px; /* Adjust this value to move the dots lower */
 }
 
 .button-container {
