@@ -131,7 +131,7 @@ const Sponsors: React.FC<{ language: "en" | "jp" }> = ({ language }) => {
       {/* Terms and Conditions Button */}
       <div className="mt-8">
         <a
-          href="/terms-and-conditions"
+          href="https://docs.google.com/document/d/e/2PACX-1vTjNQJSzoyl9yg8pHE5LmWRE-prAonkvy6XhA1h8NMb5qiEaoWdabN638rfnpoGvC8n65h8Kb76fWFd/pub"
           target="_blank"
           rel="noopener noreferrer"
           className="px-6 py-2 bg-gray-600 text-white font-semibold rounded-lg hover:bg-gray-700 transition"
