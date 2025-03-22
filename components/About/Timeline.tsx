@@ -32,7 +32,7 @@ const events: TimelineEvent[] = [
     },
     description: {
       en: "The Japanese Studies Centre was officially established by academics from four universities in Melbourne: La Trobe University, Monash University, the University of Melbourne, and Swinburne Institute of Technology. The center focuses on teaching and researching Japan-related topics.",
-      jp: "日本研究センターは、メルボルンの4つの大学（ラ・トローブ大学、モナシュ大学、メルボルン大学、スウィンバーン工科大学）の学者によって正式に設立され、日本に関する教育と研究を行っています。",
+      jp: "日本研究センターは、メルボルンの4つの大学（ラ・トローブ大学、モナッシュ大学、メルボルン大学、スウィンバーン工科大学）の学者によって正式に設立され、日本に関する教育と研究を行っています。",
     },
     image: "/images/jsc.png",
     icon: <LibraryBooksIcon />,
@@ -45,7 +45,7 @@ const events: TimelineEvent[] = [
     },
     description: {
       en: "The Monash Japanese Club was officially established in 1996 to promote cultural exchange and understanding between Japanese and non-Japanese students. Since then, the club has served as a platform for activities like language exchanges, cultural workshops, and social events celebrating both traditional and modern Japanese culture.",
-      jp: "モナシュ日本クラブは、1996年に日本人学生と非日本人学生の文化交流と理解を促進する目的で正式に設立されました。設立以来、言語交換、文化ワークショップ、日本の伝統や現代文化を祝う交流イベントなどを提供しています。",
+      jp: "モナッシュ日本クラブは、1996年に日本人学生と非日本人学生の文化交流と理解を促進する目的で正式に設立されました。設立以来、言語交換、文化ワークショップ、日本の伝統や現代文化を祝う交流イベントなどを提供しています。",
     },
     image: "/images/2008.jpg",
     icon: <CakeIcon />,
@@ -58,7 +58,7 @@ const events: TimelineEvent[] = [
     },
     description: {
       en: "Ryuichi, the IT Director in 2006, launched the first Monash Japanese Club website. It became a vital platform for sharing club news, events, and resources, greatly improving communication and member engagement.",
-      jp: "2006年、ITディレクターのリュウイチがモナシュ日本クラブの初めてのウェブサイトを立ち上げました。このウェブサイトは、クラブのニュース、イベント、リソースを共有する重要なプラットフォームとなり、会員とのコミュニケーションとエンゲージメントを大幅に向上させました。",
+      jp: "2006年、ITディレクターのリュウイチがモナッシュ日本クラブの初めてのウェブサイトを立ち上げました。このウェブサイトは、クラブのニュース、イベント、リソースを共有する重要なプラットフォームとなり、会員とのコミュニケーションとエンゲージメントを大幅に向上させました。",
     },
     image: "/images/website.png",
     icon: <ComputerIcon />,
@@ -97,7 +97,7 @@ const events: TimelineEvent[] = [
     },
     description: {
       en: "The Monash Japanese Club reached 500 active members for the first time, strengthening its role as a close-knit community for everyone interested in Japanese language and culture.",
-      jp: "モナシュ日本クラブの会員数が初めて500人に達し、日本語や日本文化に興味のあるすべての人々のための親密なコミュニティとしての役割を強化しました。",
+      jp: "モナッシュ日本クラブの会員数が初めて500人に達し、日本語や日本文化に興味のあるすべての人々のための親密なコミュニティとしての役割を強化しました。",
     },
     image: "/images/ball.jpg",
     icon: <ShowChartIcon />,
@@ -110,7 +110,7 @@ const events: TimelineEvent[] = [
     },
     description: {
       en: "The Monash Japanese Club launches a new website in 2025 built by IT Director Matthew Yau, providing up-to-date information and bridging the gap between the executive committee and the MJC community.",
-      jp: "モナシュ日本クラブは2025年にITディレクターのマシュー・ヤウによって作成された新しいウェブサイトを立ち上げ、最新情報を提供するとともに、幹部委員会と一般会員コミュニティの距離を縮めました。",
+      jp: "モナッシュ日本クラブは2025年にITディレクターのマシュー・ヤウによって作成された新しいウェブサイトを立ち上げ、最新情報を提供するとともに、幹部委員会と一般会員コミュニティの距離を縮めました。",
     },
     image: "/images/comm.jpg",
     icon: <Diversity1Icon />,
