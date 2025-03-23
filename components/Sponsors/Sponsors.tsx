@@ -89,13 +89,13 @@ const Sponsors: React.FC<{ language: "en" | "jp" }> = ({ language }) => {
             : "MJCは最新のスポンサーを歓迎します"}
         </h1>
 
-        <div className="flex items-center gap-6 justify-center">
+        <div className="flex items-center gap-6 justify-center flex-wrap">
           <img
             src="/images/mjc_old.png"
             alt="MJC Logo"
-            className="w-60 h-60 object-contain"
+            className="w-32 h-32 sm:w-36 sm:h-36 md:w-44 md:h-44 min-w-[8rem] min-h-[8rem] object-contain shrink-0"
           />
-          <span className="text-4xl font-bold text-gray-500">×</span>
+          <span className="text-5xl font-bold text-gray-500">×</span>
           <a
             href={newestSponsor.link}
             target="_blank"
@@ -107,7 +107,7 @@ const Sponsors: React.FC<{ language: "en" | "jp" }> = ({ language }) => {
             <img
               src={newestSponsor.image}
               alt={newestSponsor.name}
-              className="w-52 h-52 object-contain rounded-xl"
+              className="w-32 h-32 sm:w-36 sm:h-36 md:w-44 md:h-44 min-w-[8rem] min-h-[8rem] object-contain rounded-xl shrink-0"
             />
           </a>
         </div>
@@ -141,7 +141,7 @@ const Sponsors: React.FC<{ language: "en" | "jp" }> = ({ language }) => {
         {sponsors.map((sponsor, index) => (
           <div
             key={index}
-            className="bg-white rounded-2xl shadow-lg p-4 flex flex-col items-center text-center h-80 justify-between relative"
+            className="bg-white rounded-2xl shadow-lg p-4 flex flex-col items-center text-center h-auto min-h-[20rem] sm:h-80 justify-between relative"
           >
             {sponsor.name === newestSponsor.name && (
               <span className="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
@@ -151,7 +151,7 @@ const Sponsors: React.FC<{ language: "en" | "jp" }> = ({ language }) => {
             <img
               src={sponsor.image}
               alt={sponsor.name}
-              className="w-40 h-40 object-contain rounded-xl"
+              className="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 object-contain rounded-xl"
             />
             <div>
               <h2 className="text-2xl font-bold">{sponsor.name}</h2>
