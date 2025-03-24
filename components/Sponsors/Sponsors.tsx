@@ -54,13 +54,19 @@ const sponsors = [
     link: "https://ediblecutlery.au/",
   },
   {
-    image: "/images/sponsors/sulbing.png",
-    name: "Sulbing",
-    link: "https://sulbingcafe.com.au/",
+    image: "/images/sponsors/cubetown.png",
+    name: "Cubetown",
+    link: "https://cubetown.com.au/",
     caption: "10% discount",
   },
   {
-    image: "/images/sponsors/yappari_steak.jpg",
+    image: "/images/sponsors/maita.png",
+    name: "Maita",
+    link: "https://maita.com.au/",
+    caption: "Discount Vouchers",
+  },
+  {
+    image: "/images/sponsors/yappari_steak.png",
     name: "Yappari Steak",
     link: "https://www.instagram.com/yappari_steak_mel_central/?hl=en",
     caption: "15% discount",
