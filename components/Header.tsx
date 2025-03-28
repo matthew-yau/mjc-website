@@ -21,6 +21,7 @@ export default function Header({
         { name: "Committee", link: "/committee" },
         { name: "Events", link: "/events" },
         { name: "Sponsors", link: "/sponsors" },
+        { name: "Links", link: "/links" },
         { name: "Contact Us", link: "/enquiry" },
       ],
       jp: [
@@ -29,6 +30,7 @@ export default function Header({
         { name: "委員会", link: "/committee" },
         { name: "イベント", link: "/events" },
         { name: "スポンサー", link: "/sponsors" },
+        { name: "リンク集", link: "/links" },
         { name: "お問い合わせ", link: "/enquiry" },
       ],
     },

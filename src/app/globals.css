@@ -172,6 +172,10 @@ html {
   z-index: 20;
 }
 
+.animate-fade-in {
+  animation: fade-in 1.2s ease-out forwards;
+}
+
 .petal {
   position: absolute;
   top: -50px; /* Start above the screen */
