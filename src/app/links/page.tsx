@@ -168,9 +168,7 @@ const LinksPage: React.FC = () => {
           language === "en" ? "font-enCute" : "font-jpCute"
         }`}
       >
-        {language === "en"
-          ? "Monash Japanese Club"
-          : "モナッシュ大学日本クラブ"}
+        {language === "en" ? "Monash Japanese Club" : "モナッシュ日本クラブ"}
       </h1>
       <div
         className={`text-base text-gray-600 text-muted-foreground text-center max-w-lg px-2 ${
