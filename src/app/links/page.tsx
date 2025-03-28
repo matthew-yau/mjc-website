@@ -31,7 +31,7 @@ const LinksPage: React.FC = () => {
   const links = [
     {
       title_en: "Club Sign-up",
-      title_jp: "MJC クラブ登録",
+      title_jp: "クラブ登録",
       url: "https://clubs.msa.monash.edu/organisation/7786/",
       icon: <FaStar className="text-2xl" />,
     },
