@@ -17,6 +17,8 @@ import {
   FaSpotify,
   FaStar,
 } from "react-icons/fa";
+import { CgWebsite } from "react-icons/cg";
+
 import { Home } from "lucide-react";
 import Link from "next/link";
 
@@ -34,6 +36,12 @@ const LinksPage: React.FC = () => {
       title_jp: "クラブ登録",
       url: "https://clubs.msa.monash.edu/organisation/7786/",
       icon: <FaStar className="text-2xl" />,
+    },
+    {
+      title_en: "MJC Website",
+      title_jp: "MJCウェブサイト",
+      url: "https://www.monashjapaneseclub.com/",
+      icon: <CgWebsite className="text-2xl" />,
     },
     {
       title_en: "Instagram",
@@ -164,17 +172,17 @@ const LinksPage: React.FC = () => {
           ? "Monash Japanese Club"
           : "モナッシュ大学日本語クラブ"}
       </h1>
-      <p
+      <div
         className={`text-base text-gray-600 text-muted-foreground text-center max-w-lg px-2 ${
           language === "en" ? "font-enCute" : "font-jpCute"
         }`}
       >
-        ♡こんにちは♡ ~
+        <p className="font-jpCute">♡こんにちは♡ ~</p>
         {language === "en"
           ? "Follow our channels and keep up to date on all our events!!"
           : "チャンネルをフォローして最新情報をチェックしてね！"}{" "}
-        よろしくねー
-      </p>
+        <p className="font-jpCute">よろしくねー</p>
+      </div>
 
       {/* Link Cards */}
       <div className="mt-10 w-full max-w-lg flex flex-col gap-5 px-2">
