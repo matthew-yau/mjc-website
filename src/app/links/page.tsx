@@ -207,7 +207,7 @@ const LinksPage: React.FC = () => {
           onClick={() => setLanguage((prev) => (prev === "en" ? "jp" : "en"))}
           className="bg-white text-sm px-4 py-2 rounded-full hover:bg-gray-100 transition-colors flex items-center gap-2"
         >
-          <span className="text-lg">{language === "en" ? "🇯🇵" : "🇬🇧"}</span>
+          <span className="text-lg">{language === "en" ? "🇯🇵" : "en"}</span>
           <span>
             {language === "en" ? "日本語に切り替え" : "Switch to English"}
           </span>
