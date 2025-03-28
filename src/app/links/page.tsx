@@ -155,10 +155,20 @@ const LinksPage: React.FC = () => {
       />
 
       {/* Title */}
-      <h1 className="text-2xl text-gray-800 font-bold text-center mb-2">
-        Monash Japanese Club
+      <h1
+        className={`text-2xl text-gray-700 font-bold text-center mb-2 ${
+          language === "en" ? "font-enCute" : "font-jpCute"
+        }`}
+      >
+        {language === "en"
+          ? "Monash Japanese Club"
+          : "モナッシュ大学日本語クラブ"}
       </h1>
-      <p className="text-base text-gray-700 text-muted-foreground text-center max-w-lg px-2">
+      <p
+        className={`text-base text-gray-600 text-muted-foreground text-center max-w-lg px-2 ${
+          language === "en" ? "font-enCute" : "font-jpCute"
+        }`}
+      >
         ♡こんにちは♡ ~
         {language === "en"
           ? "Follow our channels and keep up to date on all our events!!"
@@ -180,7 +190,11 @@ const LinksPage: React.FC = () => {
               className="flex items-center justify-center w-full"
             >
               <div className="absolute left-6 text-red-300">{link.icon}</div>
-              <span className="font-semibold text-lg text-gray-700 text-center">
+              <span
+                className={`font-normal text-base text-gray-500 text-center ${
+                  language === "en" ? "font-enCute" : "font-jpCute"
+                }`}
+              >
                 {language === "en" ? link.title_en : link.title_jp}
               </span>
             </a>

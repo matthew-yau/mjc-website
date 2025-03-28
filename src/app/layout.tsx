@@ -16,7 +16,11 @@ export default function RootLayout({
       <head>
         <title>{metadata.title}</title>
         <link
-          href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&family=Zen+Maru+Gothic:wght@400;500&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500&display=swap"
           rel="stylesheet"
         />
         {/* Open Graph Meta Tags */}

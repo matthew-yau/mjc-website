@@ -15,7 +15,10 @@ module.exports = {
         horizontal: "horizontal-tb",
       },
       fontFamily: {
-        mplus: ['"M PLUS 1p"', "sans-serif"], // Custom font for Japanese
+        mplus: ['"M PLUS 1p"', "sans-serif"],
+        cute: ['"M PLUS Rounded 1c"', "sans-serif"],
+        enCute: ['"Quicksand"', "sans-serif"],
+        jpCute: ['"Zen Maru Gothic"', "sans-serif"],
       },
       keyframes: {
         slideUpFade: {
