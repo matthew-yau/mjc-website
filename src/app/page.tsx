@@ -12,10 +12,8 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function Home() {
-  // Manage the language state
   const [language, setLanguage] = useState<"en" | "jp">("en");
 
-  // Synchronize language state with localStorage on mount
   useEffect(() => {
     const storedLanguage = localStorage.getItem("language") as "en" | "jp";
     if (storedLanguage) {
@@ -23,7 +21,6 @@ export default function Home() {
     }
   }, []);
 
-  // Toggle the language and save to localStorage
   const toggleLanguage = (newLang?: "en" | "jp") => {
     const nextLanguage = newLang || (language === "en" ? "jp" : "en");
     setLanguage(nextLanguage);
@@ -41,8 +38,10 @@ export default function Home() {
     },
   };
 
+  const fontClass = language === "en" ? "font-enCute" : "font-jpCute";
+
   return (
-    <main className="relative bg-[#f8fafc]">
+    <main className={`relative bg-[#f8fafc] ${fontClass}`}>
       <Analytics />
       <SpeedInsights />
 
@@ -56,17 +55,19 @@ export default function Home() {
       <SecondSection language={language} />
 
       <InfiniteScroll />
+
       <BuyMembershipSection
         language={language}
         backgroundImage="/images/banner.png"
         year="2025"
       />
+
+      {/* Sponsors Section */}
       <div className="bg-gray-50 py-12">
         <div className="container mx-auto text-center">
-          <h1 className="text-4xl font-bold text-gray-800 mb-6">
+          <h1 className={`text-4xl font-bold text-gray-800 mb-6 ${fontClass}`}>
             {translations.sponsorsHeading[language]}
           </h1>
-          {/* Sponsors Carousel */}
           <SponsorsSection />
         </div>
       </div>
@@ -84,26 +85,26 @@ export default function Home() {
         >
           <path
             d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-            fill="#833AB4" /* Solid Purple */
+            fill="#833AB4"
           ></path>
         </svg>
       </div>
 
-      {/* Embed IG Widget with Vertical Gradient */}
+      {/* IG Widget Section */}
       {process.env.NEXT_PUBLIC_IG_WIDGET_REF && (
         <div
           className="py-4 min-h-screen"
           style={{
             background:
-              "linear-gradient(to bottom, #833AB4, #E1306C, #FCAF45, #f8fafc)", // Orange to Purple (Vertical Gradient)
+              "linear-gradient(to bottom, #833AB4, #E1306C, #FCAF45, #f8fafc)",
           }}
         >
           <h2
-            className="text-5xl font-extrabold text-center uppercase tracking-wide mt-8"
+            className={`text-5xl font-extrabold text-center uppercase tracking-wide mt-8 ${fontClass}`}
             style={{
-              color: "#FFFFFF", // White text fill
-              lineHeight: "1.2", // Improved line height for legibility
-              letterSpacing: "0.1em", // Slightly spaced letters for readability
+              color: "#FFFFFF",
+              lineHeight: "1.2",
+              letterSpacing: "0.1em",
             }}
           >
             {translations.followUsOnInstagram[language]}

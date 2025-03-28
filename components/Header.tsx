@@ -40,6 +40,8 @@ export default function Header({
     },
   };
 
+  const fontClass = language === "en" ? "font-enCute" : "font-jpCute";
+
   useEffect(() => {
     const storedLanguage = localStorage.getItem("language") as "en" | "jp";
     if (storedLanguage && storedLanguage !== language) {
@@ -80,7 +82,9 @@ export default function Header({
 
         {/* Navigation for Desktop */}
         <nav className="hidden md:flex ml-32">
-          <ul className="flex space-x-9 text-[#2b2c2e] font-lato font-medium text-sm md:text-base">
+          <ul
+            className={`flex space-x-9 text-[#2b2c2e] font-medium text-sm md:text-base ${fontClass}`}
+          >
             {translations.navigation[language].map((item) => (
               <li key={item.name} className="relative group">
                 <Link
@@ -98,13 +102,8 @@ export default function Header({
         {/* Right Section */}
         <div className="flex items-center gap-2 md:gap-4">
           <button
-            onClick={() => {
-              handleToggleLanguage(); // Call your existing toggle language logic
-              if (document.activeElement instanceof HTMLElement) {
-                document.activeElement.blur(); // Ensure the active element loses focus
-              }
-            }}
-            className="border border-gray-300 px-3 py-2 text-xs md:text-sm font-lato font-medium text-gray-800 hover:bg-gray-200 transition duration-300 rounded-md w-16 md:w-20 text-center"
+            onClick={handleToggleLanguage}
+            className={`border border-gray-300 px-3 py-2 text-xs md:text-sm text-gray-800 hover:bg-gray-200 transition duration-300 rounded-md w-16 md:w-20 text-center ${fontClass}`}
           >
             {language === "en" ? "English" : "日本語"}
           </button>
@@ -113,7 +112,7 @@ export default function Header({
             href="https://clubs.msa.monash.edu/organisation/7786/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:block relative bg-red-500 text-white px-6 py-2 rounded-full font-lato text-sm font-bold text-center overflow-hidden group transition duration-300"
+            className={`hidden md:block relative bg-red-500 text-white px-6 py-2 rounded-full text-sm font-bold text-center overflow-hidden group transition duration-300 ${fontClass}`}
           >
             {translations.joinUs[language]}
             <span className="absolute inset-0 rounded-full border-2 border-red-500 scale-0 group-hover:scale-100 transition-transform duration-300"></span>
@@ -135,7 +134,9 @@ export default function Header({
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <nav className="md:hidden bg-white border-t">
-          <ul className="flex flex-col space-y-4 px-4 py-4 text-[#2b2c2e] font-lato font-medium text-sm">
+          <ul
+            className={`flex flex-col space-y-4 px-4 py-4 text-[#2b2c2e] font-medium text-sm ${fontClass}`}
+          >
             {translations.navigation[language].map((item) => (
               <li key={item.name}>
                 <Link

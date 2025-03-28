@@ -29,16 +29,17 @@ export default function FirstSection({ language }: { language: "en" | "jp" }) {
     },
   };
 
-  // Generate petals on the client side
+  const fontClass = language === "en" ? "font-enCute" : "font-jpCute";
+
   useEffect(() => {
     const generatedPetals = [...Array(50)].map((_, index) => {
       const randomPetal = `/images/petal${
         Math.floor(Math.random() * 13) + 1
       }.png`;
-      const size = Math.random() * 20 + 10; // Random size between 10px and 30px
-      const leftPosition = Math.random() * 100; // Random position across the screen width
-      const duration = Math.random() * 5 + 5; // Random fall duration between 5s and 10s
-      const delay = Math.random() * 5; // Random animation delay
+      const size = Math.random() * 20 + 10;
+      const leftPosition = Math.random() * 100;
+      const duration = Math.random() * 5 + 5;
+      const delay = Math.random() * 5;
 
       return (
         <div
@@ -104,6 +105,7 @@ export default function FirstSection({ language }: { language: "en" | "jp" }) {
           priority
         />
       </div>
+
       {/* Pagoda Image for Mobile */}
       <div className="absolute w-[500px] h-[500px] top-40 left-1/3 transform -translate-x-1/2 translate-y-48 block md:hidden">
         <Image
@@ -121,18 +123,39 @@ export default function FirstSection({ language }: { language: "en" | "jp" }) {
         <section className="grid grid-cols-1 sm:grid-cols-2 gap-8">
           <div className="relative flex flex-col justify-center sm:ml-64">
             <div className="ml-8 sm:ml-6 overflow-visible w-full sm:w-[600px] z-20">
-              <h2 className="text-[#1f1f1f] font-mplus font-semibold tracking-wide text-2xl sm:text-4xl leading-tight z-20 sm:ml-32 animate-slideUpFade">
-                {language === "jp"
-                  ? "モナッシュ日本クラブへ"
-                  : "モナッシュ日本クラブへ"}
-              </h2>
+              {language === "jp" ? (
+                <>
+                  <h2
+                    className={`text-[#1f1f1f] font-semibold tracking-wide text-2xl sm:text-4xl leading-tight z-20 sm:ml-32 animate-slideUpFade ${fontClass}`}
+                  >
+                    モナッシュ日本クラブへ
+                  </h2>
+                  <h1
+                    className={`whitespace-nowrap text-[#1f1f1f] font-bold text-6xl sm:text-8xl mb-4 sm:mb-8 leading-tight z-20 -translate-x-0 sm:-translate-x-16 translate-y-8 sm:translate-y-16 animate-slideUpFade ${fontClass}`}
+                  >
+                    ようこそ
+                  </h1>
+                </>
+              ) : (
+                <>
+                  <h2
+                    className={`text-[#1f1f1f] font-jpCute font-semibold tracking-wide text-2xl sm:text-4xl leading-tight z-20 sm:ml-32 animate-slideUpFade ${fontClass}`}
+                  >
+                    モナッシュ日本クラブへ
+                  </h2>
+                  <h1
+                    className={`whitespace-nowrap font-jpCute text-[#1f1f1f] font-bold text-5xl sm:text-7xl mb-4 sm:mb-8 leading-tight z-20 -translate-x-0 sm:-translate-x-16 translate-y-8 sm:translate-y-16 animate-slideUpFade ${fontClass}`}
+                  >
+                    ようこそ
+                  </h1>
+                </>
+              )}
             </div>
-            <h1 className="whitespace-nowrap text-[#1f1f1f] font-bold text-6xl sm:text-8xl mb-4 sm:mb-8 leading-tight z-20 -translate-x-0 sm:-translate-x-16 translate-y-8 sm:translate-y-16 animate-slideUpFade">
-              {language === "jp" ? "ようこそ" : "ようこそ"}
-            </h1>
 
             {/* Welcome Text */}
-            <div className="w-full max-w-full sm:max-w-screen-lg text-[#727986] text-base sm:text-lg leading-relaxed mt-6 mx-auto">
+            <div
+              className={`w-full max-w-full sm:max-w-screen-lg text-[#727986] text-base sm:text-lg leading-relaxed mt-6 mx-auto ${fontClass}`}
+            >
               <h3 className="text-black font-bold text-2xl sm:text-3xl mb-2 sm:mb-4">
                 {translations.heading[language]}
               </h3>
@@ -210,6 +233,7 @@ export default function FirstSection({ language }: { language: "en" | "jp" }) {
           </div>
         </section>
       </div>
+
       {/* Divider */}
       <div className="custom-shape-divider-bottom-1736080053 z-20">
         <svg
