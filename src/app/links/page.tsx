@@ -18,7 +18,7 @@ import {
   FaStar,
 } from "react-icons/fa";
 import { CgWebsite } from "react-icons/cg";
-
+import { GiFairyWand } from "react-icons/gi";
 import { Home } from "lucide-react";
 import Link from "next/link";
 
@@ -31,6 +31,12 @@ const LinksPage: React.FC = () => {
   }, []);
 
   const links = [
+    {
+      title_en: "Ghibli Night",
+      title_jp: "クラブ登録",
+      url: "https://www.eventbrite.com.au/e/ghibli-night-tickets-1303849953309",
+      icon: <GiFairyWand className="text-2xl" />,
+    },
     {
       title_en: "Club Sign-up",
       title_jp: "クラブ登録",
@@ -157,9 +163,9 @@ const LinksPage: React.FC = () => {
 
       {/* Logo */}
       <img
-        src="/images/mjc_old.png"
+        src="/images/mjc_ghibli.png"
         alt="MJC Logo"
-        className="rounded-full w-48 h-48 mt-20"
+        className="rounded-full w-auto h-48 mt-20"
       />
 
       {/* Title */}
