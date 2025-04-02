@@ -107,7 +107,7 @@ const roles: RoleDetails[] = [
       en: "Degrees: Radiography and Medical Imaging",
       jp: "専攻: 放射線撮影と医療画像学",
     },
-    imageUrl: "/images/com/teruki.jpg",
+    imageUrl: "/images/com/teruki.png",
     description: {
       en: "Organizes and coordinates events, ensuring they run smoothly.",
       jp: "イベントを企画し、調整してスムーズに進行するようにします。",
@@ -135,7 +135,7 @@ const roles: RoleDetails[] = [
       en: "Degrees: Secondary and Primary Education (Special and Inclusive Education)",
       jp: "専攻: 中等と初等教育（特別支援教育とインクルーシブ教育）",
     },
-    imageUrl: "/images/com/sara.jpg",
+    imageUrl: "/images/com/sara.png",
     description: {
       en: "Organizes workshops, training, and educational resources for members.",
       jp: "メンバー向けにワークショップ、トレーニング、と教育リソースを企画します。",

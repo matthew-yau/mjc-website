@@ -118,6 +118,8 @@ const events: TimelineEvent[] = [
 ];
 
 const Timeline: React.FC<{ language: "en" | "jp" }> = ({ language }) => {
+  const fontClass = language === "en" ? "font-enCute" : "font-jpCute";
+
   return (
     <VerticalTimeline>
       {events.map((event, index) => (
@@ -127,13 +129,20 @@ const Timeline: React.FC<{ language: "en" | "jp" }> = ({ language }) => {
           iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
           icon={event.icon}
         >
-          <h2 className="vertical-timeline-element-title font-bold text-lg">
+          <h2
+            className={`vertical-timeline-element-title font-bold text-lg ${fontClass}`}
+          >
             {event.title[language]}
           </h2>
-          <h4 className="vertical-timeline-element-subtitle font-bold text-md">
+          <h4
+            className={`vertical-timeline-element-subtitle font-bold text-md ${fontClass}`}
+          >
             {event.year}
           </h4>
-          <p className="text-sm" style={{ fontWeight: "normal" }}>
+          <p
+            className={`text-sm ${fontClass}`}
+            style={{ fontWeight: "normal" }}
+          >
             {event.description[language]}
           </p>
           <img

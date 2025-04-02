@@ -6,6 +6,7 @@ interface FAQProps {
 }
 
 const FAQ: React.FC<FAQProps> = ({ language }) => {
+  const fontClass = language === "en" ? "font-enCute" : "font-jpCute";
   const faqs = [
     {
       question: {
@@ -99,7 +100,9 @@ const FAQ: React.FC<FAQProps> = ({ language }) => {
         boxSizing: "border-box",
       }}
     >
-      <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-4 text-center">
+      <h2
+        className={`text-xl md:text-2xl font-bold text-gray-800 mb-4 text-center ${fontClass}`}
+      >
         {language === "en" ? "Frequently Asked Questions" : "よくある質問"}
       </h2>
       <Accordion
@@ -113,7 +116,10 @@ const FAQ: React.FC<FAQProps> = ({ language }) => {
             key={index}
             aria-label={`Accordion ${index + 1}`}
             title={
-              <div style={{ textAlign: "left", fontWeight: "semi-bold" }}>
+              <div
+                style={{ textAlign: "left", fontWeight: "semi-bold" }}
+                className={`${fontClass}`}
+              >
                 {faq.question[language]}
               </div>
             }
@@ -121,6 +127,7 @@ const FAQ: React.FC<FAQProps> = ({ language }) => {
               maxWidth: "490px",
               overflow: "hidden",
             }}
+            className={`${fontClass}`}
           >
             <p
               className="text-sm md:text-base text-gray-600"

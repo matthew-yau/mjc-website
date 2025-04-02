@@ -8,6 +8,7 @@ import FAQ from "../../../components/About/FAQ";
 
 const AboutPage: React.FC = () => {
   const [language, setLanguage] = useState<"en" | "jp">("en");
+  const fontClass = language === "en" ? "font-enCute" : "font-jpCute";
 
   // Synchronize language with local storage
   useEffect(() => {
@@ -37,7 +38,7 @@ const AboutPage: React.FC = () => {
           </h1>
 
           {/* Introduction */}
-          <div className="text-lg text-gray-700 mb-12">
+          <div className={`text-lg text-gray-700 mb-12 ${fontClass}`}>
             {language === "en" ? (
               <>
                 <p>
