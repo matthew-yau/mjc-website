@@ -33,7 +33,7 @@ const roles: RoleDetails[] = [
       en: "Degrees: Laws (Honours) and Commerce",
       jp: "専攻: 法学（優等）と商学",
     },
-    imageUrl: "/images/place-holder.png",
+    imageUrl: "/images/com/ain.png",
     description: {
       en: "Assists the president and takes over their duties when necessary. Coordinates with all departments.",
       jp: "会長を補佐し、必要に応じてその職務を引き継ぎます。全ての部署と調整します。",
@@ -107,7 +107,7 @@ const roles: RoleDetails[] = [
       en: "Degrees: Radiography and Medical Imaging",
       jp: "専攻: 放射線撮影と医療画像学",
     },
-    imageUrl: "/images/place-holder.png",
+    imageUrl: "/images/com/teruki.jpg",
     description: {
       en: "Organizes and coordinates events, ensuring they run smoothly.",
       jp: "イベントを企画し、調整してスムーズに進行するようにします。",
@@ -135,7 +135,7 @@ const roles: RoleDetails[] = [
       en: "Degrees: Secondary and Primary Education (Special and Inclusive Education)",
       jp: "専攻: 中等と初等教育（特別支援教育とインクルーシブ教育）",
     },
-    imageUrl: "/images/place-holder.png",
+    imageUrl: "/images/com/sara.jpg",
     description: {
       en: "Organizes workshops, training, and educational resources for members.",
       jp: "メンバー向けにワークショップ、トレーニング、と教育リソースを企画します。",
@@ -152,7 +152,7 @@ const roles: RoleDetails[] = [
         jp: "留学先: 東京大学",
       },
     },
-    imageUrl: "/images/place-holder.png",
+    imageUrl: "/images/com/matt.jpg",
     description: {
       en: "Oversees the club's technology infrastructure and leads the development and maintenance of the club's website.",
       jp: "クラブの技術基盤を監督し、ウェブサイトの開発と維持を主導します。",
