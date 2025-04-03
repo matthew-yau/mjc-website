@@ -19,7 +19,7 @@ const roles: RoleDetails[] = [
       en: "Degrees: Laws (Honours), Commerce, and Diploma of Languages (Japanese)",
       jp: "専攻: 法学（優等）、商学、言語学ディプロマ（日本語）",
     },
-    imageUrl: "/images/place-holder.png",
+    imageUrl: "/images/com/eugene.png",
     description: {
       en: "Oversees the club's operations and ensures its success by providing leadership and vision.",
       jp: "クラブの運営を監督し、リーダーシップとビジョンを提供して成功を確実にします。",
