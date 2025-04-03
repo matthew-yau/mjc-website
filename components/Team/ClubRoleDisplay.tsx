@@ -121,7 +121,7 @@ const roles: RoleDetails[] = [
       en: "Degrees: Arts and Global Studies",
       jp: "専攻: 文学と国際学",
     },
-    imageUrl: "/images/place-holder.png",
+    imageUrl: "/images/com/konon.png",
     description: {
       en: "Establishes partnerships and secures resources for club activities.",
       jp: "パートナーシップを築き、クラブ活動のための資源を確保します。",
@@ -222,7 +222,7 @@ const ClubRoleDisplay = ({ language }: { language: "en" | "jp" }) => {
             <img
               src={selectedRole.imageUrl}
               alt={`${selectedRole.role.en} portrait`}
-              className="w-full h-auto md:w-72 md:h-72 object-cover rounded-sm bg-white p-4 shadow-lg border border-gray-300"
+              className="w-80 h-80 md:w-72 md:h-72 object-cover rounded-sm bg-white p-4 shadow-lg border border-gray-300"
               onContextMenu={(e) => e.preventDefault()}
               draggable="false"
             />
