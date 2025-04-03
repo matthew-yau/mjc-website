@@ -65,7 +65,7 @@ const roles: RoleDetails[] = [
         jp: "留学先: 一橋大学",
       },
     },
-    imageUrl: "/images/place-holder.png",
+    imageUrl: "/images/com/max.png",
     description: {
       en: "Assists the treasurer with financial tasks and ensures records are accurate.",
       jp: "会計担当を補佐し、財務タスクをサポートし、記録の正確性を確保します。",
@@ -93,7 +93,7 @@ const roles: RoleDetails[] = [
       en: "Degrees: Secondary Education and Arts",
       jp: "専攻: 中等教育と文学",
     },
-    imageUrl: "/images/place-holder.png",
+    imageUrl: "/images/com/chinatsu.png",
     description: {
       en: "Develops marketing strategies to increase club visibility and engagement.",
       jp: "クラブの認知度と参加を高めるためのマーケティング戦略を策定します。",
