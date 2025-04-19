@@ -175,7 +175,7 @@ const LinksPage: React.FC = () => {
 
       {/* Logo */}
       <img
-        src="/images/mjc_ghibli.png"
+        src="/images/mjc_old.png"
         alt="MJC Logo"
         className="rounded-full w-auto h-48 mt-20"
       />
