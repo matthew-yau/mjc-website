@@ -32,24 +32,6 @@ const LinksPage: React.FC = () => {
 
   const links = [
     {
-      title_en: "Wagashi Workshop Session 1",
-      title_jp: "和菓子ワ－クショップセッション1",
-      url: "https://www.eventbrite.com.au/e/wagashi-workshop-session-1-5pm-615pm-tickets-1318232501899?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl",
-      icon: <GiFairyWand className="text-2xl" />,
-    },
-    {
-      title_en: "Wagashi Workshop Session 2",
-      title_jp: "和菓子ワ－クショップセッション2",
-      url: "https://www.eventbrite.com.au/e/wagashi-workshop-session-2-630pm-745pm-tickets-1318661474969?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl",
-      icon: <GiFairyWand className="text-2xl" />,
-    },
-    {
-      title_en: "Ghibli Night",
-      title_jp: "クラブ登録",
-      url: "https://www.eventbrite.com.au/e/ghibli-night-tickets-1303849953309",
-      icon: <GiFairyWand className="text-2xl" />,
-    },
-    {
       title_en: "Club Sign-up",
       title_jp: "クラブ登録",
       url: "https://clubs.msa.monash.edu/organisation/7786/",
