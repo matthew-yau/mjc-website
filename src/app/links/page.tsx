@@ -20,7 +20,7 @@ import {
 import { CgWebsite } from "react-icons/cg";
 import { Home } from "lucide-react";
 import Link from "next/link";
-import { LuSword } from "react-icons/lu";
+import { FaGamepad } from "react-icons/fa6";
 
 const LinksPage: React.FC = () => {
   const [language, setLanguage] = useState<"en" | "jp">("en");
@@ -32,10 +32,10 @@ const LinksPage: React.FC = () => {
 
   const links = [
     {
-      title_en: "Kendo Sign-up",
-      title_jp: "剣道登録",
-      url: "https://www.eventbrite.com.au/e/kendo-masterclass-tickets-1349786029349?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl",
-      icon: <LuSword className="text-2xl" />,
+      title_en: "Games Night Sign-up",
+      title_jp: "ゲームナイト登録",
+      url: "https://docs.google.com/forms/d/e/1FAIpQLSeQZGYsH5t-G0MxB8DnpjpWaKyUF1188e80cdVcn0LxFDL9IQ/viewform",
+      icon: <FaGamepad className="text-2xl" />,
     },
     {
       title_en: "Club Sign-up",
