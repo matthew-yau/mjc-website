@@ -2,18 +2,22 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { Fireworks } from "@fireworks-js/react";
+import { FireworksHandlers } from "@fireworks-js/react";
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Home } from "lucide-react";
 
 const BallPage: React.FC = () => {
-  const fireworksRef = useRef<any>(null);
+  const fireworksRef = useRef<FireworksHandlers | null>(null);
   const [language, setLanguage] = useState<"en" | "jp">("en");
 
   useEffect(() => {
-    fireworksRef.current?.start();
+    const fwInstance = fireworksRef.current;
+    fwInstance?.start();
+
     return () => {
-      fireworksRef.current?.stop();
+      fwInstance?.stop();
     };
   }, []);
 
