@@ -22,6 +22,7 @@ import { Home } from "lucide-react";
 import Link from "next/link";
 import { FaGamepad } from "react-icons/fa6";
 import { GiLantern } from "react-icons/gi";
+import { BsTicketDetailed } from "react-icons/bs";
 
 const LinksPage: React.FC = () => {
   const [language, setLanguage] = useState<"en" | "jp">("en");
@@ -33,9 +34,15 @@ const LinksPage: React.FC = () => {
 
   const links = [
     {
-      title_en: "MJC x MUJC Ball Sign-up",
+      title_en: "MJC x MUJC Ball Tickets",
       title_jp: "千灯祭登録",
       url: "https://www.trybooking.com/events/landing/1401090",
+      icon: <BsTicketDetailed className="text-2xl" />,
+    },
+    {
+      title_en: "MJC x MUJC Ball Details",
+      title_jp: "千灯祭詳細",
+      url: "/ball",
       icon: <GiLantern className="text-2xl" />,
     },
     {
