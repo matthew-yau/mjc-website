@@ -21,6 +21,8 @@ const BallPage: React.FC = () => {
     };
   }, []);
 
+  const fontClass = language === "en" ? "font-enCute" : "font-jpCute";
+
   useEffect(() => {
     const storedLanguage = localStorage.getItem("language") as "en" | "jp";
     if (storedLanguage) setLanguage(storedLanguage);
@@ -33,7 +35,9 @@ const BallPage: React.FC = () => {
   };
 
   return (
-    <div className="relative flex flex-col min-h-screen overflow-hidden font-sans">
+    <div
+      className={`relative flex flex-col min-h-screen overflow-hidden ${fontClass}`}
+    >
       {/* Background image container */}
       <div
         className="fixed inset-0 z-[-1] scale-[1.05]"
