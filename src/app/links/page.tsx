@@ -21,6 +21,8 @@ import { CgWebsite } from "react-icons/cg";
 import { Home } from "lucide-react";
 import Link from "next/link";
 import { FaGamepad } from "react-icons/fa6";
+import { GiLantern } from "react-icons/gi";
+import { BsTicketDetailed } from "react-icons/bs";
 
 const LinksPage: React.FC = () => {
   const [language, setLanguage] = useState<"en" | "jp">("en");
@@ -36,6 +38,18 @@ const LinksPage: React.FC = () => {
       title_jp: "ゲームナイト登録",
       url: "https://docs.google.com/forms/d/e/1FAIpQLSeQZGYsH5t-G0MxB8DnpjpWaKyUF1188e80cdVcn0LxFDL9IQ/viewform",
       icon: <FaGamepad className="text-2xl" />,
+    },
+    {
+      title_en: "MJC x MUJC Ball Tickets",
+      title_jp: "千灯祭登録",
+      url: "https://www.trybooking.com/events/landing/1401090",
+      icon: <BsTicketDetailed className="text-2xl" />,
+    },
+    {
+      title_en: "MJC x MUJC Ball Details",
+      title_jp: "千灯祭詳細",
+      url: "/ball",
+      icon: <GiLantern className="text-2xl" />,
     },
     {
       title_en: "Club Sign-up",
