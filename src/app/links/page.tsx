@@ -34,6 +34,12 @@ const LinksPage: React.FC = () => {
 
   const links = [
     {
+      title_en: "Games Night Sign-up",
+      title_jp: "ゲームナイト登録",
+      url: "https://docs.google.com/forms/d/e/1FAIpQLSeQZGYsH5t-G0MxB8DnpjpWaKyUF1188e80cdVcn0LxFDL9IQ/viewform",
+      icon: <FaGamepad className="text-2xl" />,
+    },
+    {
       title_en: "MJC x MUJC Ball Tickets",
       title_jp: "千灯祭登録",
       url: "https://www.trybooking.com/events/landing/1401090",
@@ -44,12 +50,6 @@ const LinksPage: React.FC = () => {
       title_jp: "千灯祭詳細",
       url: "/ball",
       icon: <GiLantern className="text-2xl" />,
-    },
-    {
-      title_en: "Games Night Sign-up",
-      title_jp: "ゲームナイト登録",
-      url: "https://docs.google.com/forms/d/e/1FAIpQLSeQZGYsH5t-G0MxB8DnpjpWaKyUF1188e80cdVcn0LxFDL9IQ/viewform",
-      icon: <FaGamepad className="text-2xl" />,
     },
     {
       title_en: "Club Sign-up",
