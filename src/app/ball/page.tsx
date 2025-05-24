@@ -34,6 +34,27 @@ const BallPage: React.FC = () => {
     localStorage.setItem("language", newLang);
   };
 
+  const ballSponsors = [
+      {
+    image: "/images/sponsors/hareruya.png",
+    name: "Hareruya Pantry",
+    link: "https://hareruya.com.au/",
+    caption: "Discount Vouchers",
+    },  
+    {
+    image: "/images/sponsors/miyama_melbourne.jpg",
+    name: "Miyama Melbourne",
+    link: "https://miyamamelbourne.com.au/",
+    caption: "Discount Vouchers",
+    },
+    {
+    image: "/images/sponsors/hakata_gensuke.jpg",
+    name: "Hakata Gensuke",
+    link: "https://gensuke.com.au/",
+    caption: "Discount Vouchers",
+    }
+  ]
+
   return (
     <div
       className={`relative flex flex-col min-h-screen overflow-hidden ${fontClass}`}
@@ -198,6 +219,44 @@ const BallPage: React.FC = () => {
             </a>
           </div>
         </div>
+
+        {/* Ball Sponsors Section */}
+        <div className="w-full max-w-4xl mt-12 mb-12 px-4">
+            <h2 className={`text-3xl font-bold text-center mb-8 ${language === 'en' ? 'text-black' : 'text-black'}`}>
+                {language === "en" ? "Our Ball Sponsors" : "ボールのスポンサー"}
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                {ballSponsors.map((sponsor, index) => (
+                    <div
+                        key={index}
+                        className="bg-white/20 backdrop-blur-sm rounded-xl shadow-lg p-4 flex flex-col items-center text-center justify-between min-h-[280px]" 
+                    >
+                        <img
+                            src={sponsor.image} 
+                            alt={sponsor.name}
+                            className="w-32 h-32 sm:w-36 sm:h-36 object-contain rounded-lg mb-3"
+                        />
+                        <div className="flex-grow flex flex-col justify-center">
+                            <h3 className="text-xl font-semibold text-gray-800">{sponsor.name}</h3>
+                            {sponsor.caption && (
+                                <p className="text-gray-600 mt-1 text-sm">
+                                    {sponsor.caption}
+                                </p>
+                            )}
+                        </div>
+                        <a
+                            href={sponsor.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mt-4 px-5 py-2 bg-rose-500 text-white font-semibold rounded-lg hover:bg-rose-600 transition-colors duration-200 text-sm" 
+                        >
+                            {language === "en" ? "Visit Website" : "ウェブサイトを見る"}
+                        </a>
+                    </div>
+                ))}
+            </div>
+        </div>
+
       </main>
 
       {/* Fireworks Overlay */}
