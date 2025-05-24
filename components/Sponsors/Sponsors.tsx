@@ -30,6 +30,7 @@ const sponsors = [
     image: "/images/sponsors/hareruya.png",
     name: "Hareruya Pantry",
     link: "https://hareruya.com.au/",
+    caption: "Discount Vouchers",
   },
   {
     image: "/images/sponsors/madeinjapan.png",
@@ -71,6 +72,19 @@ const sponsors = [
     link: "https://www.instagram.com/yappari_steak_mel_central/?hl=en",
     caption: "15% discount",
   },
+  {
+    image: "/images/sponsors/miyama_melbourne.jpg",
+    name: "Miyama Melbourne",
+    link: "https://miyamamelbourne.com.au/",
+    caption: "Discount Vouchers",
+  },
+    {
+    image: "/images/sponsors/hakata_gensuke.jpg",
+    name: "Hakata Gensuke",
+    link: "https://gensuke.com.au/",
+    caption: "Discount Vouchers",
+  },
+
 ];
 
 const newestSponsor = sponsors[sponsors.length - 1];
