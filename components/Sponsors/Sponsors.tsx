@@ -61,12 +61,6 @@ const sponsors = [
     caption: "10% discount",
   },
   {
-    image: "/images/sponsors/maita.png",
-    name: "Maita",
-    link: "https://maita.com.au/",
-    caption: "Discount Vouchers",
-  },
-  {
     image: "/images/sponsors/yappari_steak.png",
     name: "Yappari Steak",
     link: "https://www.instagram.com/yappari_steak_mel_central/?hl=en",
