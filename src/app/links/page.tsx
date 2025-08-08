@@ -20,8 +20,6 @@ import {
 import { CgWebsite } from "react-icons/cg";
 import { Home } from "lucide-react";
 import Link from "next/link";
-import { FaGamepad } from "react-icons/fa6";
-import { GiLantern } from "react-icons/gi";
 import { BsTicketDetailed } from "react-icons/bs";
 
 const LinksPage: React.FC = () => {
