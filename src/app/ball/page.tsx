@@ -35,25 +35,91 @@ const BallPage: React.FC = () => {
   };
 
   const ballSponsors = [
-      {
-    image: "/images/sponsors/hareruya.png",
-    name: "Hareruya Pantry",
-    link: "https://hareruya.com.au/",
-    caption: "Discount Vouchers",
-    },  
     {
-    image: "/images/sponsors/miyama_melbourne.jpg",
-    name: "Miyama Melbourne",
-    link: "https://miyamamelbourne.com.au/",
-    caption: "Discount Vouchers",
+      image: "/images/sponsors/hareruya.png",
+      name: "Hareruya Pantry",
+      link: "https://hareruya.com.au/",
+      caption: "Gift vouchers, 6 × $50, no expiry",
     },
     {
-    image: "/images/sponsors/hakata_gensuke.jpg",
-    name: "Hakata Gensuke",
-    link: "https://gensuke.com.au/",
-    caption: "Discount Vouchers",
-    }
-  ]
+      image: "/images/sponsors/miyama_melbourne.jpg",
+      name: "Miyama Melbourne",
+      link: "https://miyamamelbourne.com.au/",
+      caption: "Vouchers, 1 × $50, 2 × $25, expiring 7 Aug 2026",
+    },
+    {
+      image: "/images/sponsors/hakata_gensuke.jpg",
+      name: "Hakata Gensuke",
+      link: "https://gensuke.com.au/",
+      caption: "Free Ramen for a Year, plus 20 × 20% off, expiring 31 Dec 2025",
+    },
+    {
+      image: "/images/sponsors/ms_nails.jpg",
+      name: "MS Nails",
+      link: "https://www.instagram.com/msnail_melbourne",
+      caption: "15% off with MJC or MUJC ID, expiring 7 Aug 2025",
+    },
+    {
+      image: "/images/sponsors/marico_salon.jpg",
+      name: "Marico Salon",
+      link: "https://www.instagram.com/maricosalonmelbourne",
+      caption: "1 × 2 hr voucher, plus 30% off with code ball30, expiring 7 Aug 2025",
+    },
+    {
+      image: "/images/sponsors/m_kami_head_spa.jpg",
+      name: "M Kami Japanese Head Spa",
+      link: "https://www.instagram.com/mkamijapaneseheadspa",
+      caption: "1 × 90 min Premium Head Spa gift voucher",
+    },
+    {
+      image: "/images/sponsors/rush_escape_game.jpg",
+      name: "Rush Escape Game",
+      link: "mailto:southyarra@rushescapegame.com.au",
+      caption: "3 × $148 vouchers for 2 players, SY, St Kilda, Hawthorn, expiring 5 Jun 2028",
+    },
+    {
+      image: "/images/sponsors/minimaru.jpg",
+      name: "Minimaru",
+      link: "mailto:hello@minimaru.com",
+      caption: "$150 store credit",
+    },
+    {
+      image: "/images/sponsors/sakedokoro_namara.jpg",
+      name: "Sakedokoro Namara",
+      link: "mailto:kanpai@sakedokoronamara.com.au",
+      caption: "200 × one drink free coupon",
+    },
+    {
+      image: "/images/sponsors/yaki_jin.jpg",
+      name: "Yaki-Jin",
+      link: "#",
+      caption: "10% off with MJC or MUJC ID, expiring 7 Aug 2025",
+    },
+    {
+      image: "/images/sponsors/head_spa_by_hikari.jpg",
+      name: "The Head Spa by Hikari",
+      link: "https://www.instagram.com/theheadspabyhikari",
+      caption: "1 × 60 min Head Spa session",
+    },
+    {
+      image: "/images/sponsors/sharetea.jpg",
+      name: "ShareTea",
+      link: "https://www.instagram.com/sharetea.clayton",
+      caption: "5 items merch, plus 15% off SM and Clayton, expiring end of 2025",
+    },
+    {
+      image: "/images/sponsors/itae_beauty_lounge.jpg",
+      name: "Itae Beauty Lounge",
+      link: "https://www.instagram.com/itae_beautylounge",
+      caption: "5 × Skin Analysis + 25% off vouchers",
+    },
+    {
+      image: "/images/sponsors/horuhoru.jpg",
+      name: "HoruHoru",
+      link: "https://www.instagram.com/horuhoru_yakiniku",
+      caption: "4 × $250 dinner vouchers",
+    },
+  ];  
 
   return (
     <div
