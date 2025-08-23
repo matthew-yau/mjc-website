@@ -32,15 +32,9 @@ const LinksPage: React.FC = () => {
 
   const links = [
     {
-      title_en: "Matcha Workshop Session 1 (4:30-5:30pm)",
-      title_jp: "抹茶ワークショップ セッション1 (16:30-17:30)",
-      url: "https://www.eventbrite.com.au/e/matcha-workshop-session-1-430pm-530pm-tickets-1536489925729?aff=oddtdtcreator",
-      icon: <BsTicketDetailed className="text-2xl" />,
-    },
-    {
-      title_en: "Matcha Workshop Session 2 (6:00-7:00pm)",
-      title_jp: "抹茶ワークショップ セッション2 (18:00-19:00)",
-      url: "https://www.eventbrite.com.au/e/matcha-workshop-session-2-600pm-700pm-tickets-1536523315599?aff=oddtdtcreator",
+      title_en: "Undokai x Undonghwae",
+      title_jp: "Undokai x Undonghwae",
+      url: "https://www.eventbrite.com.au/e/undokai-x-undonghwae-tickets-1616543518179?aff=oddtdtcreator&fbclid=IwY2xjawMUgYNleHRuA2FlbQIxMQABHh2IJ2kXXej-Hvaid2D_lX6ZhhWmnVb6cWNMmVb8naYwMDNe8c-dI75o37FB_aem_TBOJQCzM9a0HTUGiyPR-zQ",
       icon: <BsTicketDetailed className="text-2xl" />,
     },
     {
