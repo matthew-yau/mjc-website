@@ -74,25 +74,25 @@ const BallPage: React.FC = () => {
     {
       image: "/images/sponsors/rush_escape_game.jpg",
       name: "Rush Escape Game",
-      link: "mailto:southyarra@rushescapegame.com.au",
+      link: "https://www.rushescapegame.com.au/",
       caption: "3 × $148 vouchers for 2 players, SY, St Kilda, Hawthorn, expiring 5 Jun 2028",
     },
     {
       image: "/images/sponsors/minimaru.jpg",
       name: "Minimaru",
-      link: "mailto:hello@minimaru.com",
+      link: "https://minimaru.com/?srsltid=AfmBOooqOcTbVuMB6aXId88WRahCzKVqmQ6nBt77YaiZaWX78iihBiEi",
       caption: "$150 store credit",
     },
     {
       image: "/images/sponsors/sakedokoro_namara.jpg",
       name: "Sakedokoro Namara",
-      link: "mailto:kanpai@sakedokoronamara.com.au",
+      link: "https://www.sakedokoronamara.com.au/",
       caption: "200 × one drink free coupon",
     },
     {
       image: "/images/sponsors/yaki_jin.jpg",
       name: "Yaki-Jin",
-      link: "#",
+      link: "https://www.yakijin.com.au/",
       caption: "10% off with MJC or MUJC ID, expiring 7 Aug 2025",
     },
     {
