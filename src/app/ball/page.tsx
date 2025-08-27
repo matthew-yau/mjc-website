@@ -119,7 +119,26 @@ const BallPage: React.FC = () => {
       link: "https://www.instagram.com/horuhoru_yakiniku",
       caption: "4 × $250 dinner vouchers",
     },
-  ];  
+    {
+      image: "/images/sponsors/izumi_massage.jpg",
+      name: "Izumi Japanese Massage",
+      link: "https://izumimassage.com.au/",
+      caption: "1 × 2.5 hr package treatment voucher, plus 5% off all treatments (excluding promos)",
+    },
+    {
+      image: "/images/sponsors/vintage_japanese_textiles.jpg",
+      name: "Vintage Japanese Textiles",
+      link: "https://www.etsy.com/au/shop/VintageJapanTextiles?fbclid=PAZXh0bgNhZW0CMTEAAafsetmt1lpzRnaIlgueeuhaKqP2gFcuwB9CRZYa-lDvRbsc4zbY7zVIkWfqXQ_aem_dgyhFwmh0vy7FQ5At7I9bg",
+      caption: "10% off orders over $100, 20% off over $200, expiring 7 Aug 2025",
+    },
+    {
+      image: "/images/sponsors/hakubaku.jpg",
+      name: "Hakubaku",
+      link: "https://hakubaku.com.au/",
+      caption: "60 packets of premium noodles, sponsorship gift",
+    },
+  ];
+
 
   return (
     <div
