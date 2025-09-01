@@ -96,7 +96,7 @@ const LinksPage: React.FC = () => {
     {
       title_en: "Spotify",
       title_jp: "スポティファイ",
-      url: "https://open.spotify.com/playlist/4cJ5eGBrddeAu74lkKuQqp?si=ce37f5e71d36401e&nd=1#login",
+      url: "https://open.spotify.com/playlist/0JXm4pwHSOhDODaNPwCQXE?si=pEgKxhhFSvSdsiWK_JoqZw",
       icon: <FaSpotify className="text-2xl" />,
     },
   ];
