@@ -32,9 +32,9 @@ const LinksPage: React.FC = () => {
 
   const links = [
     {
-      title_en: "Undokai x Undonghwae",
-      title_jp: "Undokai x Undonghwae",
-      url: "https://www.eventbrite.com.au/e/undokai-x-undonghwae-tickets-1616543518179?aff=oddtdtcreator&fbclid=IwY2xjawMUgYNleHRuA2FlbQIxMQABHh2IJ2kXXej-Hvaid2D_lX6ZhhWmnVb6cWNMmVb8naYwMDNe8c-dI75o37FB_aem_TBOJQCzM9a0HTUGiyPR-zQ",
+      title_en: "Careers Nights",
+      title_jp: "Careers Nights",
+      url: "https://docs.google.com/forms/d/e/1FAIpQLSd3vv1oW6YKS1W9jNe1Ql_absGFvDyeNxU6HLWFE242JVaOcQ/viewform?usp=sharing&ouid=100375236315837821768",
       icon: <BsTicketDetailed className="text-2xl" />,
     },
     {
