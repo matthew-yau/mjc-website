@@ -123,7 +123,7 @@ const BallPage: React.FC = () => {
       image: "/images/sponsors/izumi_massage.jpg",
       name: "Izumi Japanese Massage",
       link: "https://izumimassage.com.au/",
-      caption: "1 × 2.5 hr package treatment voucher, plus 5% off all treatments (excluding promos)",
+      caption: "1 x 2.5 hr package treatment voucher, plus 5% off all treatments (excluding promos)",
     },
     {
       image: "/images/sponsors/vintage_japanese_textiles.jpg",
